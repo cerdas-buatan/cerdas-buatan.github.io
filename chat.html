@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasydisal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-header {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .chat-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            height: 550px;
+            overflow-y: scroll;
+        }
+        .chat-box p {
+            margin: 0;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        .user-message {
+            background-color: #e1ffc7;
+            text-align: right;
+            margin-top: 20;
+            padding: 10px;
+        }
+        .bot-message {
+            background-color: #f1f1f1;
+            text-align: left;
+            margin: 20;
+            padding: 10px;
+        }
+        .chat-input {
+            margin-top: 10px;
+            display: flex;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .chat-input button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Gasydisal</div>
+        <div class="chat-box" id="chat-box">
+            <!-- Pesan akan ditampilkan di sini -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Ketik pesan...">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() === '') return;
+
+            // Tambahkan pesan pengguna ke chat box
+            const chatBox = document.getElementById('chat-box');
+            const userMessage = document.createElement('p');
+            userMessage.className = 'user-message';
+            userMessage.textContent = userInput;
+            chatBox.appendChild(userMessage);
+
+            // Kosongkan input pengguna
+            document.getElementById('user-input').value = '';
+
+            // Gulir ke bawah untuk menampilkan pesan baru
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Simulasikan respons bot
+            setTimeout(() => {
+                const botMessage = document.createElement('p');
+                botMessage.className = 'bot-message';
+                botMessage.textContent = 'APPPPAAAAAAA';
+                chatBox.appendChild(botMessage);
+
+                // Gulir ke bawah untuk menampilkan pesan baru
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
