@@ -10,32 +10,43 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .chat-container {
-            padding: 20px;
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            height: 500px;            
         }
         .chat-header {
             font-size: 24px;
-            margin-bottom: 10px;
+            padding: 15px;
             text-align: center;
+            background-color: #5b88b8;
+            color: #fff;
         }
         .chat-box {
-            border: 1px solid #ddd;
+            background-color: #f9f9f9;
             padding: 10px;
             border-radius: 8px;
             height: 550px;
-            overflow-y: scroll;
+            overflow-y: auto;
         }
         .chat-box p {
-            margin: 0;
-            padding: 5px 10px;
-            border-radius: 8px;
+            padding: 10px;
+            border-radius: 10px;
         }
         .user-message {
-            background-color: #e1ffc7;
+            background-color: #a4c4f1;
             text-align: right;
             margin-top: 20;
             padding: 10px;
@@ -47,22 +58,22 @@
             padding: 10px;
         }
         .chat-input {
-            margin-top: 10px;
+            padding: 10px;
             display: flex;
         }
         .chat-input input {
             flex: 1;
             padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 20px;
         }
         .chat-input button {
             padding: 10px 20px;
             margin-left: 10px;
             border: none;
-            background-color: #007bff;
+            background-color: #5b88b8;
             color: #fff;
-            border-radius: 8px;
+            border-radius: 20px;
             cursor: pointer;
         }
     </style>
@@ -80,6 +91,11 @@
     </div>
 
     <script>
+        document.getElementById('user-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
         function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             if (userInput.trim() === '') return;
