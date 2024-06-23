@@ -34,6 +34,14 @@ function sendMessage() {
     }, 1000);
 }
 
+function addBotImage(messageContainer) {
+    const botIcon = document.createElement('img');
+    botIcon.src = 'panda.png';
+    botIcon.alt = 'Bot Icon';
+    botIcon.className = 'message-icon';
+    messageContainer.appendChild(botIcon);
+  }
+
 function getBotResponse() {
     const responses = [
         "That's funny! 😂",

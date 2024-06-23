@@ -47,6 +47,7 @@ body {
 }
 
 .message {
+    display: flex;
     background-color: #cac396;
     margin-bottom: 20px;
     padding: 15px;
@@ -72,8 +73,7 @@ body {
     width: 35px;
     height: 30px;
     border-radius: 50%;
-    margin-right: 10px;
-    margin-left: -15px; /* Geser ikon ke kiri dari bubble */
+    margin-right: 10px;/* Geser ikon ke kiri dari bubble */
 }
 
 .bot-message {
@@ -90,7 +90,6 @@ body {
     border: 1.5px solid #ece8c9;
     border-radius: 1.5vw 0vw 1.5vw 1.8vw;
     background-color: #ece8c9;
-    
 }
 
 .message p {
