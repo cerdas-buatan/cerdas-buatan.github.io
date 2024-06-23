@@ -1,3 +1,9 @@
+document.getElementById('user-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() === '') return;
@@ -5,10 +11,10 @@ function sendMessage() {
     const chatBody = document.getElementById('chat-body');
 
     // Add user message to chat
-    const userMessageDiv = document.createElement('div');
-    userMessageDiv.classList.add('message', 'user-message');
-    userMessageDiv.innerHTML = `<p>${userInput}</p>`;
-    chatBody.appendChild(userMessageDiv);
+    const userMessage = document.createElement('p');
+    userMessage.className = 'user-message';
+    userMessage.textContent = userInput;
+    chatBody.appendChild(userMessage);
 
     // Clear the input field
     document.getElementById('user-input').value = '';
@@ -18,10 +24,10 @@ function sendMessage() {
 
     // Simulate bot response
     setTimeout(() => {
-        const botMessageDiv = document.createElement('div');
-        botMessageDiv.classList.add('message', 'bot-message');
-        botMessageDiv.innerHTML = `<p>${getBotResponse()}</p>`;
-        chatBody.appendChild(botMessageDiv);
+        const botMessage = document.createElement('p');
+        botMessage.className = 'bot-message';
+        botMessage.textContent = getBotResponse();
+        chatBody.appendChild(botMessage);
 
         // Scroll to the bottom of chat
         chatBody.scrollTop = chatBody.scrollHeight;
