@@ -28,7 +28,7 @@ body {
 }
 
 .bot-icon {
-    width: 115px;
+    width: 100px;
     height: 85px;
     margin-right: 15px;
 }
@@ -71,7 +71,7 @@ body {
 
 .message-icon {
     width: 35px;
-    height: 30px;
+    height: 35px;
     border-radius: 50%;
     margin-right: 10px;/* Geser ikon ke kiri dari bubble */
 }
@@ -88,7 +88,7 @@ body {
     align-self: flex-end; /* User message di kanan */
     justify-self: flex-end;
     border: 1.5px solid #ece8c9;
-    border-radius: 1.5vw 0vw 1.5vw 1.8vw;
+    border-radius: 1.0vw 0vw 1.5vw 1.8vw;
     background-color: #ece8c9;
 }
 
