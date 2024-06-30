@@ -292,7 +292,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background: #1a1a37;
+  background-color: #5c5c77;
   opacity: 0.8;
 }
 
@@ -709,7 +709,7 @@ link:focus,
 }
 .hero-slider .prevArrow:hover,
 .hero-slider .nextArrow:hover {
-  color: #ffbc3b;
+  color: #4d3202;
 }
 .hero-slider .prevArrow {
   right: 60px;
@@ -728,7 +728,7 @@ link:focus,
   margin: 0 6px;
 }
 .hero-slider .slick-dots li.slick-active button {
-  background: #ffbc3b;
+  background: #4d3202;
 }
 .hero-slider .slick-dots li button {
   color: transparent;
