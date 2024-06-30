@@ -11,10 +11,15 @@ function sendMessage() {
     const chatBody = document.getElementById('chat-body');
 
     // Add user message to chat
+    const userMessageContainer = document.createElement('div');
+    userMessageContainer.className = 'message-container user-message-container';
+
     const userMessage = document.createElement('p');
     userMessage.className = 'user-message';
     userMessage.textContent = userInput;
     chatBody.appendChild(userMessage);
+    chatBody.appendChild(userMessageContainer);
+
 
     // Clear the input field
     document.getElementById('user-input').value = '';
@@ -24,10 +29,23 @@ function sendMessage() {
 
     // Simulate bot response
     setTimeout(() => {
+        const botMessageContainer = document.createElement('div');
+        botMessageContainer.className = 'message-container bot-message-container';
+
+        const botMessageIcon = document.createElement('img');
+        botMessageIcon.src = 'panda.png';
+        botMessageIcon.alt = 'Bot Icon';
+        botMessageIcon.className = 'message-icon';
+
+
         const botMessage = document.createElement('p');
-        botMessage.className = 'bot-message';
+        botMessage.className = 'message bot-message';
         botMessage.textContent = getBotResponse();
-        chatBody.appendChild(botMessage);
+        botMessageContainer.appendChild(botMessageIcon);
+        botMessageContainer.appendChild(botMessage);
+
+        chatBody.appendChild(botMessageContainer);
+        
 
         // Scroll to the bottom of chat
         chatBody.scrollTop = chatBody.scrollHeight;

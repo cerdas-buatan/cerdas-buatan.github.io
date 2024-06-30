@@ -46,6 +46,20 @@ body {
     flex-direction: column;
 }
 
+.message-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.bot-message-container {
+    justify-content: flex-start;
+}
+
+.user-message-container {
+    justify-content: flex-end;
+}
+
 .message {
     display: flex;
     background-color: #cac396;
