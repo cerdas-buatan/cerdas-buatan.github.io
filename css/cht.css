@@ -1,6 +1,6 @@
 body {
     font-family: 'Monospace', Monospace;
-    background: url('bb.jpg');
+    background: url('../gambar/bb.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
