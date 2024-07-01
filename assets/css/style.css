@@ -871,6 +871,22 @@ link:focus,
   transition: 0s ease;
 }
 
+.card-img-top {
+  width: 250px; /* Ukuran lebar foto */
+  height: 350px; /* Ukuran tinggi foto */
+  border-radius: 60%; /* Membuat foto bulat */
+  object-fit: cover; /* Menjaga proporsi foto */
+  margin: 0 auto; /* Memusatkan foto */
+}
+.card-body {
+  text-align: center; /* Memusatkan teks di dalam card body */
+}
+.card-title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
 /* /success story */
 /* events */
 .card-date {

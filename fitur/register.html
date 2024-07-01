@@ -37,7 +37,9 @@
 
         .register-container input[type="text"],
         .register-container input[type="email"],
-        .register-container input[type="password"] {
+        .register-container input[type="password"],
+        .register-container input[type="confirmpass"]
+         {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -89,6 +91,10 @@
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
+
+            <label for="confirmpass">Confirm Password</label>
+            <input type="text" id="confirmpass" name="confirmpass" required>
+
 
             <input type="submit" value="Register">
         </form>
