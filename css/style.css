@@ -13,6 +13,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.2;
   font-family: "Poppins", sans-serif;
@@ -292,7 +297,7 @@ a h4:hover {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #5c5c77;
+  background-color: #1e1e4b;
   opacity: 0.8;
 }
 
