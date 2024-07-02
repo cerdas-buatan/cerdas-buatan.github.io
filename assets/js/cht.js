@@ -33,7 +33,7 @@ function sendMessage() {
         botMessageContainer.className = 'message-container bot-message-container';
 
         const botMessageIcon = document.createElement('img');
-        botMessageIcon.src = 'panda.png';
+        botMessageIcon.src = '../assets/gambar/panda.png';
         botMessageIcon.alt = 'Bot Icon';
         botMessageIcon.className = 'message-icon';
 
@@ -54,7 +54,7 @@ function sendMessage() {
 
 function addBotImage(messageContainer) {
     const botIcon = document.createElement('img');
-    botIcon.src = 'panda.png';
+    botIcon.src = '../gambar/panda.png';
     botIcon.alt = 'Bot Icon';
     botIcon.className = 'message-icon';
     messageContainer.appendChild(botIcon);

@@ -1,12 +1,21 @@
 body {
     font-family: 'Monospace', Monospace;
-    background: url('../gambar/bb.jpg');
+    background: url('../gambar/awan.jpeg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    body {
+        background: url('../gambar/awan.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+
 
 .chat-container {
     width: 500px;
@@ -20,7 +29,7 @@ body {
 }
 
 .chat-header {
-    background-color: #cac396;
+    background-color: #6a6a2ea9;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -62,7 +71,7 @@ body {
 
 .message {
     display: flex;
-    background-color: #cac396;
+    background-color: #6a6a2ea9;
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 10px;
@@ -92,7 +101,7 @@ body {
 
 .bot-message {
     margin-left: 10px;
-    background-color: #cac396;
+    background-color: #6a6a2ea9;
     align-self: flex-start; /* Bot message di kiri */
     justify-self: flex-start;
     
@@ -101,9 +110,9 @@ body {
 .user-message {
     align-self: flex-end; /* User message di kanan */
     justify-self: flex-end;
-    border: 1.5px solid #ece8c9;
+    border: 1.5px solid #6a6a2ea9;
     border-radius: 1.0vw 0vw 1.5vw 1.8vw;
-    background-color: #ece8c9;
+    background-color: #cecea5a9;
 }
 
 .message p {
@@ -114,7 +123,7 @@ body {
 .chat-footer {
     display: flex;
     padding: 15px;
-    background-color: #cac396;
+    background-color: #6a6a2ea9;
     border-top: 3px solid f5f2d6;
 }
 
