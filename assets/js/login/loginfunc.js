@@ -41,7 +41,7 @@ function responseData(result) {
       showConfirmButton: false,
       timer: 1000,
     }).then(() => {
-      window.location.href = "../admin/page/index.html";
+      window.location.href = "../index.html";
     });
   } else {
     Swal.fire({
