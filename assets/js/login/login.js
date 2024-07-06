@@ -26,14 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
           return response.json();
         })
         .then(data => {
-          // Handle successful login
           console.log('Login successful:', data);
           alert('Login successful!');
-          // You can redirect to another page like this:
-          // window.location.href = 'dashboard.html';
+           window.location.href = '../index.html';
         })
         .catch(error => {
-          // Handle error
           console.error('Error:', error);
           document.getElementById('error-message').textContent = 'Login failed. Please check your username and password.';
         });
