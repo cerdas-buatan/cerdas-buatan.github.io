@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
       const registerData = {
         username: username,
-        password: password,
-        email: email
+        akun: {
+            email: email,
+            password: password
+          }
       };
   
       const requestOptions = {
