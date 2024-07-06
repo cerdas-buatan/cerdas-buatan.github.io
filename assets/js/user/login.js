@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
           console.log('Login successful:', data);
           alert('Login successful!');
-           window.location.href = '../index.html';
+           window.location.href = '../chat.html';
         })
         .catch(error => {
           console.error('Error:', error);
