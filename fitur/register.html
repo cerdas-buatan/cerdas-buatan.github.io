@@ -47,27 +47,25 @@
                         <form method="#" action="#" class="mt-10">
                                            
                             <div>
-                                <input type="email" placeholder="Email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                                <input type="email" placeholder="Email" id="email" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
                             </div>
 
                             <div>
-                                <input type="username" placeholder="Username" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
+                                <input type="username" placeholder="Username" id="username" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
                             </div>
 
                             <div>
-                                <input type="password" placeholder="Password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
-                            </div>
-
-                            <div class="mt-7">            
-                                <input type="password" placeholder="Confirm Password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">      
+                                <input type="password" placeholder="Password" id="password" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0">
                             </div>
                 
                             <div class="mt-7">
-                                <button class="bg-yellow-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105" style="background-color: #213565;">
+                                <button id="registerBtn" type="submit" class="bg-yellow-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105" style="background-color: #213565;">
                                     Sign Up
                                 </button>
                             </div> 
-                                        
+                        </div>
+                             <div class="error-message" id="error-message"></div>
+                        </div>   
                             <div class="mt-7">
                                 <div class="flex justify-center items-center">
                                     <label class="mr-2" >Already have an account?</label>
@@ -81,5 +79,6 @@
                 </div>
             </div>            
         </div>
+        <script src="../assets/js/user/register.js"></script>
 </body>
 </html>
