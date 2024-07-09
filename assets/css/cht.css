@@ -82,8 +82,8 @@ body {
     border: 0.15vw solid #777;
     background-color: #fff;
     border-radius: 0px 1.5vw 1.5vw 1.8vw;
-    padding: 1vw;
-    margin: 0.4vw 0;
+    padding: 20px;
+    margin-left: 1000px;
     align-self: flex-end;
     justify-self: flex-end;
 }
