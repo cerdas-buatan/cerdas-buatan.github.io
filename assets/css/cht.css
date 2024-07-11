@@ -141,3 +141,16 @@ button {
     font-size: 1em;
     cursor: pointer;
 }
+
+.logout-btn {
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: end;
+}
+
+.logout-btn:hover {
+    background-color: #353516a9;
+}
