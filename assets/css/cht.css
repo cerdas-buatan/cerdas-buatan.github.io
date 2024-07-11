@@ -24,7 +24,16 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 3px solid #f5f2d6;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bot-icon {
