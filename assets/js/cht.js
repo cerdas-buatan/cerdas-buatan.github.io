@@ -70,3 +70,10 @@ function getBotResponse() {
     ];
     return responses[Math.floor(Math.random() * responses.length)];
 }
+
+function logout() {
+    // Implement your logout logic here
+    alert("Logging out...");
+    // Redirect to login page or perform other logout actions
+    window.location.href = '../home.html'; // Replace with your actual login page
+}
