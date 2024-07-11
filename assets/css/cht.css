@@ -30,7 +30,7 @@ body {
 
 .header-content {
     text-align: center; /* Center align text */
-            flex: 1; /* Take up remaining space */
+    flex: 1; /* Take up remaining space */
 }
 
 .bot-icon {
@@ -149,15 +149,15 @@ button {
 }
 
 .logout-btn {
-   background-color: transparent;
-            border: none;
-            padding: 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            right: 20px; /* Adjust right position to place the logout button on the top right */
-            transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust right position to place the logout button on the top right */
+    transform: translateY(-50%);
 }
 
 .logout-btn:hover {
