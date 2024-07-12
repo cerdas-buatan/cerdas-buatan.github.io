@@ -72,8 +72,6 @@ function getBotResponse() {
 }
 
 function logout() {
-    // Implement your logout logic here
-    alert("Logging out...");
-    // Redirect to login page or perform other logout actions
-    window.location.href = '../home.html'; // Replace with your actual login page
+    window.location.href = 'index.html'; // Mengarahkan pengguna ke halaman index.html 
 }
+
