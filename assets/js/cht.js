@@ -52,18 +52,6 @@ function sendMessage() {
     }, 1000);
 }
 
-function openNav() {
-    document.getElementById("mySidebar").style.left = "0";
-    document.querySelector(".main").style.marginLeft = "250px";
-    document.querySelector(".chat-container").style.marginLeft = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidebar").style.left = "-250px";
-    document.querySelector(".main").style.marginLeft = "0";
-    document.querySelector(".chat-container").style.marginLeft = "0";
-}
-
 function addBotImage(messageContainer) {
     const botIcon = document.createElement('img');
     botIcon.src = '../gambar/panda.png';
@@ -81,6 +69,18 @@ function getBotResponse() {
         "You’re hilarious! 🤣"
     ];
     return responses[Math.floor(Math.random() * responses.length)];
+}
+
+function openNav() {
+    document.getElementById("mySidebar").style.left = "0";
+    document.querySelector(".main").style.marginLeft = "250px";
+    document.querySelector(".chat-container").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.left = "-250px";
+    document.querySelector(".main").style.marginLeft = "0";
+    document.querySelector(".chat-container").style.marginLeft = "0";
 }
 
 function logout() {
