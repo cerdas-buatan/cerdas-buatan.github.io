@@ -9,28 +9,41 @@
 </head>
 
 <body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        <p>lorem</p>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>  
+    </div>
+    <button class="logout-btn" onclick="logout()">
+        <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+    </button>
+
+    <!-- Chat container -->
     <div class="chat-container">
         <div class="chat-header">
             <div class="header-content">
                 <h2>Gasydisal Bot</h2>
             </div>
-            <button class="logout-btn" onclick="logout()">
-                <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
-            </button>
         </div>
         <div class="chat-body" id="chat-body">
             <div class="message-container bot-message-container">
                 <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
                 <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
             </div>
+            <!-- Example message -->
+            <!-- <div class="message-container user-message-container">
+                <p class="message user-message">Hi there!</p>
+                <img src="user-avatar.png" class="message-icon" alt="User Icon">
+            </div> -->
         </div>
-        <!--<div class="chat-body" id="chat-body">
-            <div class="message-container bot-message-container">
-                <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
-                <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
-            </div>
-        </div> -->
-
 
         <div class="chat-footer">
             <input type="text" id="user-input" placeholder="Type your message...">
@@ -38,8 +51,7 @@
         </div>
     </div>
 
-<script src="../assets/js/cht.js"> </script>
+<script src="../assets/js/cht.js"></script>
 
 </body>
-
 </html>
