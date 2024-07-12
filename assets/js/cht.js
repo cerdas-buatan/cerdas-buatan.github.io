@@ -24,9 +24,11 @@ function sendMessage() {
     // Clear the input field
     document.getElementById('user-input').value = '';
 
+
     // Scroll to the bottom of chat
     chatBody.scrollTop = chatBody.scrollHeight;
 
+    
     // Simulate bot response
     setTimeout(() => {
         const botMessageContainer = document.createElement('div');
@@ -63,10 +65,13 @@ function addBotImage(messageContainer) {
 function getBotResponse() {
     const responses = [
         "That's funny! 😂",
+        /*"I see what you did there! 😜",
+        "Tell me more! 🤔",
+        "Haha, good one! 😄",
+        "You’re hilarious! 🤣"*/
         "I see what you did there! 😜",
         "Tell me more! 🤔",
         "Haha, good one! 😄",
-        "You’re hilarious! 🤣"
     ];
     return responses[Math.floor(Math.random() * responses.length)];
 }
@@ -86,5 +91,3 @@ function closeNav() {
 function logout() {
     window.location.href = 'index.html'; // Mengarahkan pengguna ke halaman index.html 
 }
-
-
