@@ -84,52 +84,52 @@ body{
         color: #fff;
     } */
         
-            .message-container {
-                display: flex;
-                margin-bottom: 10px;
-            }
+.message-container {
+    display: flex;
+    margin-bottom: 10px;
+}
     
-            .message-icon {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
+.message-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
     
-            .bot-message {
-                background-color: #f0f0f0;
-                padding: 10px;
-                border-radius: 10px;
-                max-width: 70%;
-            }
+.bot-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
     
-            .chat-footer {
-                display: flex;
-                align-items: center;
-                padding: 10px;
-                background-color: #f8f9fa;
-            }
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
     
-            #user-input {
-                flex: 1;
-                padding: 8px;
-                margin-right: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
+#user-input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
     
-            button[type="submit"] {
-                padding: 8px 15px;
-                background-color: #fff;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
+button[type="submit"] {
+    padding: 8px 15px;
+    background-color: #fff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
     
-            button[type="submit"]:hover {
-                background-color: #0056b3;
-            }
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
 
 .chat-container {
     width: 100%;
