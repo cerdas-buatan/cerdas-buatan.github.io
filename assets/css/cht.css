@@ -310,5 +310,14 @@ button {
 .logout-btn:hover {
     background-color: #353516a9;
 }
-//sidebar
+//profile-icon
+.profile-icon {
+    margin-right: 20px;
+}
+
+.profile-icon img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
