@@ -6,8 +6,6 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0;
-    /* padding: 0;
-    overflow-x: hidden; */
 }
 
 /* Sidebar styles */
@@ -83,6 +81,14 @@ body{
         background-color: #6a6a2ea9;
         color: #fff;
     } */
+.chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #6a6a2ea9;
+        color: #fff;
+    }
         
 .message-container {
     display: flex;
@@ -300,5 +306,3 @@ button {
     border-radius: 50%;
     cursor: pointer;
 }
-
-
