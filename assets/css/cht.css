@@ -159,7 +159,7 @@ body{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transiction: margin-left 0.3s ease:
+    transiction: margin-left 0.3s ease;
 }
 
 .chat-header {
@@ -296,13 +296,13 @@ button {
 }
 
 .logout-btn {
-/*    background-color: transparent;*/
-/*    border: none;*/
-/*    padding: 5px;*/
-/*    border-radius: 10px;*/
-/*    cursor: pointer;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
+   background-color: transparent;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
     right: 20px; /* Adjust right position to place the logout button on the top right */
     transform: translateY(-50%);
 }
@@ -310,7 +310,7 @@ button {
 .logout-btn:hover {
     background-color: #353516a9;
 }
-//profile-icon
+
 .profile-icon {
     margin-right: 20px;
 }
