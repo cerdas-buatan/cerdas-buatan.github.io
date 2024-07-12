@@ -37,7 +37,6 @@ function responseData (result) {
         Swal.fire({
             icon: "success",
             title: "Register Successful",
-            text: result.message,
         }).then(() => {
             window.location.href = "./login.html";
         });
@@ -45,7 +44,6 @@ function responseData (result) {
         Swal.fire({
             icon: "error",
             title: "Register Failed",
-            text: result.message,
         });
     }
 }
