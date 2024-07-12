@@ -32,10 +32,10 @@ body{
 }
     
 .sidebar a {
-    padding: 10px 15px;
+    padding: 8px 20px;
     text-decoration: none;
     font-size: 18px;
-    color: white;
+    color: black;
     display: block;
     transition: 0.3s;
 }
@@ -58,11 +58,6 @@ body{
     transition: margin-left 0.3s;
 }
     
-/* Chat container styles */
-.chat-container {
-    transition: margin-left 0.3s;
-}
-    
 .openbtn {
     position: fixed;
     top: 10px;
@@ -81,13 +76,13 @@ body{
 }
     
 /* .chat-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-                background-color: #6a6a2ea9;
-                color: #fff;
-            } */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #6a6a2ea9;
+        color: #fff;
+    } */
         
             .message-container {
                 display: flex;
