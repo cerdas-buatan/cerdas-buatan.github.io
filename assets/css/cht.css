@@ -9,26 +9,27 @@ body{
     /* padding: 0;
     overflow-x: hidden; */
 }
-               /* Sidebar styles */
-               .sidebar {
-                height: 100%;
-                width: 250px;
-                position: fixed;
-                top: 0;
-                left: -250px; /* Initially hidden off-screen */
-                background-color: #fff;
-                padding-top: 20px;
-                transition: 0.3s;
-                z-index: 1000; /* Ensure it overlays main content */
-            }
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    background-color: #fff;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1000; /* Ensure it overlays main content */
+}
     
-            .sidebar-header {
-                padding: 10px;
-                text-align: center;
-                background-color: #fff;
-                color: black;
-                border-bottom: 1px solid #555;
-            }
+.sidebar-header {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    border-bottom: 1px solid #555;
+}
     
             .sidebar a {
                 padding: 10px 15px;
