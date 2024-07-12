@@ -79,11 +79,9 @@ body{
         align-items: center;
         padding: 10px;
         background-color: #6a6a2ea9;
-        color: #fff;
     } */
-.chat-header {
-        color: #fff;
-    }
+
+    
         
 .message-container {
     display: flex;
