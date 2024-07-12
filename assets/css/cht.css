@@ -88,18 +88,7 @@ body{
                 background-color: #6a6a2ea9;
                 color: #fff;
             } */
-    
-            /* .logout-btn {
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-          .chat-body {
-                height: calc(100vh - 150px); /* Adjust based on chat container height */
-                overflow-y: auto;
-                padding: 10px;
-            }
-    
+        
             .message-container {
                 display: flex;
                 margin-bottom: 10px;
