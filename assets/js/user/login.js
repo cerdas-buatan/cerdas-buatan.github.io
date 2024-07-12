@@ -34,7 +34,6 @@ function responseData(result) {
     Swal.fire({
       icon: "success",
       title: "Login Successful",
-      text: result.message,
     }).then(() => {
       window.location.href = "./chat.html";
     });
@@ -42,7 +41,6 @@ function responseData(result) {
     Swal.fire({
       icon: "error",
       title: "Login Failed",
-      text: result.message,
     });
   }
 }
