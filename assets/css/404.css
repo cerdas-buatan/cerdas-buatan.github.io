@@ -1,7 +1,5 @@
-html,
 body {
-  height: 100%;
-  width: 100%;
+  
   margin: 0px;
   background: linear-gradient(90deg, rgba(47,54,64,1) 23%, rgba(24,27,32,1) 100%);
 }
@@ -13,7 +11,6 @@ body {
   left: -300px;
   width: 900px;
   height: 900px;
-  content: '';
   border-radius: 100%;
   box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.5);
 }
@@ -64,10 +61,7 @@ body {
   animation-direction: alternate;
 }
 
-@keyframes shimmer {
-  from {opacity: 0;}
-  to {opacity: 0.7;}
-}
+
 
 .star1 {
   top: 40%;
@@ -140,8 +134,8 @@ body {
 }
 
 .error__button--active {
-  background-color: #e67e22;
-  border: 2px solid #e67e22;
+  background-color: #625c58;
+  border: 2px solid #544e49;
   color: white;
 }
 
@@ -304,7 +298,7 @@ body {
 }
 
 .astronaut__wrist-left {
-  background-color: #e67e22;
+  background-color: #625c58;
   position: absolute;
   top: 122px;
   left: 6.5px;
@@ -316,7 +310,7 @@ body {
 }
 
 .astronaut__wrist-right {
-  background-color: #e67e22;
+  background-color: #625c58;
   position: absolute;
   top: 98px;
   left: 141px;
@@ -361,7 +355,7 @@ body {
   border-radius: 3px;
   border-top-left-radius: 8em;
   border-top-right-radius: 8em;
-  border-bottom: 4px solid #e67e22;
+  border-bottom: 4px solid #625c58;
 }
 
 .astronaut__foot-right {
@@ -376,5 +370,5 @@ body {
   border-radius: 3px;
   border-top-left-radius: 8em;
   border-top-right-radius: 8em;
-  border-bottom: 4px solid #e67e22;
+  border-bottom: 4px solid #625c58;
 }
