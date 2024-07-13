@@ -15,6 +15,8 @@ function postRegister(target_url, data, responseFunction) {
 }
 
 const Register = () => {
+    // Display loading overlay
+  showLoadingOverlay();
     const target_url = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/registeraii";
     
     const username = getValue("username");
@@ -32,7 +34,19 @@ const Register = () => {
     postRegister(target_url, data, responseData);
 }
 
+function showLoadingOverlay() {
+    // Show loading overlay
+    document.getElementById('loader-wrapper').style.display = 'flex';
+  }
+  
+  function hideLoadingOverlay() {
+    // Hide loading overlay
+    document.getElementById('loader-wrapper').style.display = 'none';
+  }
+
 function responseData (result) {
+    // Hide loading overlay when response is received
+  hideLoadingOverlay();
     if (result.error === undefined || !result.error) {
         Swal.fire({
             icon: "success",
