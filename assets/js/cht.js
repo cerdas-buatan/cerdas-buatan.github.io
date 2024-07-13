@@ -78,7 +78,7 @@ function getBotResponse() {
 
 function openNav() {
     document.getElementById("mySidebar").style.left = "0";
-    document.querySelector(".main").style.marginLeft = "250px";
+    document.querySelector(".main").style.marginLeft = "3px";
     document.querySelector(".chat-container").style.marginLeft = "250px";
 }
 
