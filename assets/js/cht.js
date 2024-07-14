@@ -89,5 +89,8 @@ function closeNav() {
 }
 
 function logout() {
-    window.location.href = 'index.html'; // Mengarahkan pengguna ke halaman index.html 
+    window.location.href = '../index.html'; // Mengarahkan pengguna ke halaman index.html 
+}
+function login() {
+    window.location.href = './login.html'; // Mengarahkan pengguna ke halaman login.html 
 }
