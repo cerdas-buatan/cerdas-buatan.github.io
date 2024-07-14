@@ -23,6 +23,10 @@
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
+        <!-- Logout button -->
+        <button class="logout-btn" onclick="logout()">
+            <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+        </button>
     </div>
 
     <!-- Main content -->
@@ -30,17 +34,15 @@
         <button class="openbtn" onclick="openNav()">&#9776;</button>  
     </div>
 
-    <!-- Logout button -->
-    <button class="logout-btn" onclick="logout()">
-        <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
-    </button>
-
     <!-- Chat container -->
     <div class="chat-container">
         <div class="chat-header">
             <div class="header-content">
                 <h2>Gasydisal Bot</h2>
             </div>
+            <button class="login-btn" onclick="login()">
+                <img src="../assets/gambar/login.png" width="25px" alt="Login">
+            </button>
         </div>
         <div class="chat-body" id="chat-body">
             <div class="message-container bot-message-container">
