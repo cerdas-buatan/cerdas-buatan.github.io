@@ -372,3 +372,31 @@ body {
   border-top-right-radius: 8em;
   border-bottom: 4px solid #625c58;
 }
+
+/* Mobile styles */
+@media (max-width: 300px) {
+  .moon {
+      width: 150px;
+      height: 150px;
+      top: 5%;
+  }
+
+  .error__title {
+      font-size: 70px;
+  }
+
+  .error__subtitle, .error__description {
+      font-size: 16px;
+  }
+
+  .astronaut {
+      width: 100px;
+      height: 200px;
+      top: 30%;
+  }
+
+  .error__button {
+      padding: 8px 16px;
+      margin: 5px;
+  }
+}
