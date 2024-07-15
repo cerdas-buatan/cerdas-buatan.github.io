@@ -28,6 +28,22 @@ body{
     color: black;
     border-bottom: 1px solid #555;
 }
+
+.chat-management {
+    margin-top: 20px;
+}
+
+.new-chat-btn,
+.delete-history-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
     
 .sidebar a {
     padding: 8px 20px;
@@ -277,7 +293,7 @@ button {
 }
 
 .logout-btn {
-   background-color: transparent;
+    background-color: #dc3545;
     border: none;
     padding: 5px;
     border-radius: 10px;
@@ -292,11 +308,18 @@ button {
     background-color: #353516a9;
 }
 
-.profile-icon {
-    margin-right: 20px;
+
+
+/* .logout-btn {
+    margin-top: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
 }
 
-.profile-icon img {
-    border-radius: 50%;
-    cursor: pointer;
-}
+.logout-btn img {
+    vertical-align: middle;
+} */

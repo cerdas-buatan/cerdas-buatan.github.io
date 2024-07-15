@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/cht.css">
     <link rel="shortcut icon" href="../assets/gambar/log.png" type="image/x-icon">
 
-    <!-- fontawesome icon -->
+    <!-- FontAwesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YcZBYOgG24QwwDPuXgS4XtThDbzH8FTvKs3UNRv1fB/2JgkHuSNTKM5DwPfyQ8q3d8jH+/rBZGAmjLh8l3e10w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -19,10 +19,19 @@
             <h2>Menu</h2>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         </div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a>
+
+        <!-- Chat Management Section -->
+        <div class="chat-management">
+            <h3>Chat Management</h3>
+            <button class="new-chat-btn" onclick="addNewChat()">
+                <i class="fas fa-plus"></i> 
+            </button>
+            <button class="delete-history-btn" onclick="deleteChatHistory()">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+
         <!-- Logout button -->
         <button class="logout-btn" onclick="logout()">
             <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
@@ -35,7 +44,7 @@
     </div>
 
     <!-- Chat container -->
-    <div class="chat-container">
+    <div class="chat-container" id="chat-container">
         <div class="chat-header">
             <div class="header-content">
                 <h2>Gasydisal Bot</h2>
@@ -59,7 +68,5 @@
     <script src="../assets/js/cht.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.filterizr.min.js"></script>
-    
 </body>
-
 </html>

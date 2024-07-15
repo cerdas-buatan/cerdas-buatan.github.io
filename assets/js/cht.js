@@ -84,8 +84,42 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidebar").style.left = "-250px";
+    document.getElementById("mySidebar").style.width = "0";
     document.querySelector(".main").style.marginLeft = "0";
     document.querySelector(".chat-container").style.marginLeft = "0";
+}
+
+function logout() {
+    // Implement logout functionality here
+    console.log("Logged out");
+}
+
+function addNewChat() {
+    // Implement the functionality to add a new chat
+    console.log("New chat added");
+    // You can update the UI or make an API call here to create a new chat
+}
+
+function deleteChatHistory() {
+    // Implement the functionality to delete chat history
+    console.log("Chat history deleted");
+    // You can update the UI or make an API call here to delete chat history
+}
+
+function scrollToChat() {
+    document.getElementById("chat-container").scrollIntoView({ behavior: 'smooth' });
+}
+
+function addNewChat() {
+    // Implement the functionality to add a new chat
+    console.log("New chat added");
+    // You can update the UI or make an API call here to create a new chat
+}
+
+function deleteChatHistory() {
+    // Implement the functionality to delete chat history
+    console.log("Chat history deleted");
+    // You can update the UI or make an API call here to delete chat history
 }
 
 function logout() {
