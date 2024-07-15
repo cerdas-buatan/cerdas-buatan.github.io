@@ -94,37 +94,15 @@ function logout() {
     console.log("Logged out");
 }
 
-function addNewChat() {
-    // Implement the functionality to add a new chat
-    console.log("New chat added");
-    // You can update the UI or make an API call here to create a new chat
-}
-
-function deleteChatHistory() {
-    // Implement the functionality to delete chat history
-    console.log("Chat history deleted");
-    // You can update the UI or make an API call here to delete chat history
-}
-
 function scrollToChat() {
     document.getElementById("chat-container").scrollIntoView({ behavior: 'smooth' });
 }
 
-function addNewChat() {
-    // Implement the functionality to add a new chat
-    console.log("New chat added");
-    // You can update the UI or make an API call here to create a new chat
-}
-
-function deleteChatHistory() {
-    // Implement the functionality to delete chat history
-    console.log("Chat history deleted");
-    // You can update the UI or make an API call here to delete chat history
-}
-
-function logout() {
-    window.location.href = '../index.html'; // Mengarahkan pengguna ke halaman index.html 
-}
-function login() {
-    window.location.href = './login.html'; // Mengarahkan pengguna ke halaman login.html 
+function toggleOptionsMenu() {
+    var optionsMenu = document.getElementById("optionsMenu");
+    if (optionsMenu.style.display === "block") {
+        optionsMenu.style.display = "none";
+    } else {
+        optionsMenu.style.display = "block";
+    }
 }

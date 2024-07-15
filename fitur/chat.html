@@ -9,34 +9,38 @@
 
     <!-- FontAwesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YcZBYOgG24QwwDPuXgS4XtThDbzH8FTvKs3UNRv1fB/2JgkHuSNTKM5DwPfyQ8q3d8jH+/rBZGAmjLh8l3e10w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- Sidebar -->
-    <div id="mySidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h2>Menu</h2>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        </div>
-        <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a>
-
-        <!-- Chat Management Section -->
-        <div class="chat-management">
-            <h3>Chat Management</h3>
-            <button class="new-chat-btn" onclick="addNewChat()">
-                <i class="fas fa-plus">New</i> 
-            </button>
-            <button class="delete-chat-btn" onclick="deleteChat()">
-                <i class="fas fa-trash">Delete</i>
-        </div>
-
-        <!-- Logout button -->
-        <button class="logout-btn" onclick="logout()">
-            <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
-        </button>
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Menu</h2>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
+    <div class="menu-item">
+        <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a> 
+        <span class="material-icons popup-menu" onclick="toggleOptionsMenu()">more_vert</span>
+        <div class="options-menu" id="optionsMenu">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+        </div>
+    </div>
+
+    <!-- Logout button -->
+    <button class="logout-btn" onclick="logout()">
+        <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+    </button>
+</div>
+
+    <!-- Logout button -->
+    <button class="logout-btn" onclick="logout()">
+        <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+    </button>
+</div>
 
     <!-- Main content -->
     <div class="main">
