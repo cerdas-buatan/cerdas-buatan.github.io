@@ -9,6 +9,7 @@
 
     <!-- FontAwesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YcZBYOgG24QwwDPuXgS4XtThDbzH8FTvKs3UNRv1fB/2JgkHuSNTKM5DwPfyQ8q3d8jH+/rBZGAmjLh8l3e10w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -25,11 +26,10 @@
         <div class="chat-management">
             <h3>Chat Management</h3>
             <button class="new-chat-btn" onclick="addNewChat()">
-                <i class="fas fa-plus"></i> 
+                <i class="fas fa-plus">New</i> 
             </button>
-            <button class="delete-history-btn" onclick="deleteChatHistory()">
-                <i class="fas fa-trash-alt"></i>
-            </button>
+            <button class="delete-chat-btn" onclick="deleteChat()">
+                <i class="fas fa-trash">Delete</i>
         </div>
 
         <!-- Logout button -->
