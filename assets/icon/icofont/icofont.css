@@ -93,6 +93,21 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ead3";
 }
 
+.icofont-duotone.icofont-add-users:before
+{
+  content: "\13ab7";
+}
+
+.icofont-duotone.icofont-add-users:after
+{
+  content: "\13ab6";
+}
+
+.icofont-support:before
+{
+  content: "\ecfa";
+}
+
 [class^="icofont-"].icofont-duotone,
 	[class*=" icofont-"].icofont-duotone
 {
