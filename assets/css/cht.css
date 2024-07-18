@@ -347,9 +347,9 @@ button {
     margin-top: 20px;
     background-color: #dc3545;
     color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+    border: none;  
+    cursor: pointer;  
+    width: 100%;  
     padding: 10px;
 }
 
