@@ -121,17 +121,7 @@ body{
 .openbtn:hover {
     background-color: #353516a9;
 }
-    
-/* .chat-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        background-color: #6a6a2ea9;
-    } */
-
-    
-        
+            
 .message-container {
     display: flex;
     margin-bottom: 10px;
