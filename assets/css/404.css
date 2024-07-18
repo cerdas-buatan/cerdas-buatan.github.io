@@ -423,9 +423,9 @@ body {
   padding: 0.5em 2em;  
   outline: none; 
   border: 2px solid #2f3640;
-  background-color: transparent;
+  background-color: transparent;  
   border-radius: 8em;
-  color: #576375;
+  color: #576375;  
   cursor: pointer;
   transition-duration: 0.2s;
   font-size: 0.75em;
