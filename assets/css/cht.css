@@ -135,10 +135,10 @@ body{
 }
     
 .bot-message {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 70%;
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    border-radius: 10px; 
+    max-width: 70%; 
 }
     
 .chat-footer {
