@@ -219,9 +219,9 @@ button[type="submit"]:hover {
 }
 
 .message-container {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 20px;
+    display: flex; 
+    align-items: flex-end;  
+    margin-bottom: 20px; 
 }
 
 .message-container2 {
