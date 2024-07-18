@@ -356,3 +356,15 @@ button {
 .logout-btn img {
     vertical-align: middle;
 } */
+
+/*.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    background-color: #fff;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1000; 
+}*/
