@@ -406,8 +406,8 @@ body {
   position: absolute;
   top: 240px;
   left: 111px;
-  width: 28px;
-  height: 20px;  
+  width: 28px;  
+  height: 20px;    
   content: ''; 
   transform: rotate(-10deg);  
   border-radius: 3px; 
