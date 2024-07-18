@@ -277,8 +277,8 @@ button[type="submit"]:hover {
 
 .user-message {
     align-self: flex-end; /* User message di kanan */
-    justify-self: flex-end;
-    border: 1.5px solid #6a6a2ea9;
+    justify-self: flex-end; 
+    border: 1.5px solid #6a6a2ea9; 
     border-radius: 1.0vw 0vw 1.5vw 1.8vw;
     background-color: #cecea5a9;
 }
