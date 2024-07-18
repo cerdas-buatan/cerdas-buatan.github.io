@@ -341,8 +341,6 @@ button {
     background-color: #353516a9;
 }
 
-
-
 /* .logout-btn {
     margin-top: 20px;
     background-color: #dc3545;
@@ -358,10 +356,10 @@ button {
 } */
 
 /*.sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
+    height: 100%;  
+    width: 250px;  
+    position: fixed;  
+    top: 0;  
     left: -250px; 
     background-color: #fff;
     padding-top: 20px;
