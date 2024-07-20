@@ -280,7 +280,7 @@ button[type="submit"]:hover {
     justify-self: flex-end; 
     border: 1.5px solid #805932; 
     border-radius: 1.0vw 0vw 1.5vw 1.8vw;
-    background-color: #cecea5a9;
+    background-color: #cec2b6;
 }
 
 .message p {
@@ -301,7 +301,7 @@ button[type="submit"]:hover {
     border: none;
     border-radius: 50px;
     font-size: 1em;
-    background-color: #e6e6c4a3;
+    background-color: #b9ab9d;
 }
 
 button {
@@ -316,7 +316,7 @@ button {
 }
 
 .logout-btn {
-    background-color: #a74c55;
+    background-color: #92434b;
     border: none;
     padding: 5px;
     border-radius: 10px;
