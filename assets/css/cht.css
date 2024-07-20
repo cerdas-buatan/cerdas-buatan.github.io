@@ -330,34 +330,3 @@ button {
 .logout-btn:hover {
     background-color: #353516a9;
 }
-
-/* .logout-btn {
-    margin-top: 20px;
-    background-color: #dc3545;
-    color: white;
-    border: none;  
-    cursor: pointer;  
-    width: 100%;  
-    padding: 10px;
-}
-
-
-/*.sidebar {
-    height: 100%;  
-    width: 250px;  
-    position: fixed;  
-    top: 0;  
-    left: -250px; 
-    background-color: #fff;
-    padding-top: 20px;
-    transition: 0.3s;
-    z-index: 1000; 
-}*/
-
-/*.sidebar-header {
-    padding: 10px;  
-    text-align: center;
-    background-color: #fff;  
-    color: black;  
-    border-bottom: 1px solid #555;  
-}*/
