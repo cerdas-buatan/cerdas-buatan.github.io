@@ -71,9 +71,19 @@ function closeNav() {
 }
 
 function logout() {
-    window.location.href = 'index.html'; // Mengarahkan pengguna ke halaman index.html 
-    window.location.href = '../index.html'; // Mengarahkan pengguna ke halaman index.html 
+    Swal.fire({
+        title: 'Are you sure you want to logout?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, logout',
+        cancelButtonText: 'No, stay logged in'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'index.html'; // Mengarahkan pengguna ke halaman index.html
+        }
+    });
 }
+
 function login() {
     window.location.href = './login.html'; // Mengarahkan pengguna ke halaman login.html 
 }
