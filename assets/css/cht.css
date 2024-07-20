@@ -78,7 +78,7 @@ body{
 }
     
 .sidebar a:hover {
-    background-color: #6a6a2ea9;
+    background-color: #805932;
 }
     
 .sidebar .closebtn {
@@ -86,7 +86,7 @@ body{
     top: 10px;
     right: 25px;
     font-size: 36px;
-    color: #6a6a2ea9;
+    color: #805932;
     cursor: pointer;
 }
 
@@ -182,7 +182,7 @@ button[type="submit"]:hover {
 }
 
 .chat-header {
-    background-color: #6a6a2ea9;
+    background-color: #805932;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -240,7 +240,7 @@ button[type="submit"]:hover {
 
 .message {
     display: flex;
-    background-color: #6a6a2ea9;
+    background-color: #805932;
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 10px;
@@ -270,7 +270,7 @@ button[type="submit"]:hover {
 
 .bot-message {
     margin-left: 10px;
-    background-color: #6a6a2ea9;
+    background-color: #805932;
     align-self: flex-start; /* Bot message di kiri */
     justify-self: flex-start;
 }
@@ -278,7 +278,7 @@ button[type="submit"]:hover {
 .user-message {
     align-self: flex-end; /* User message di kanan */
     justify-self: flex-end; 
-    border: 1.5px solid #6a6a2ea9; 
+    border: 1.5px solid #805932; 
     border-radius: 1.0vw 0vw 1.5vw 1.8vw;
     background-color: #cecea5a9;
 }
@@ -305,7 +305,7 @@ button[type="submit"]:hover {
 }
 
 button {
-    background-color:#6a6a2ea9;
+    background-color:#805932;
     color: #0c0b0b;
     border: none;
     padding: 15px;
