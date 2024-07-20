@@ -83,7 +83,3 @@ function logout() {
         }
     });
 }
-
-function login() {
-    window.location.href = './login.html'; // Mengarahkan pengguna ke halaman login.html 
-}
