@@ -192,8 +192,8 @@ button[type="submit"]:hover {
 }
 
 .header-content {
-    text-align: center; /* Center align text */
-    flex: 1; /* Take up remaining space */
+    text-align: center; /* text posisinya ditengah */
+    flex: 1; /* Take up remaining space  */
     
 }
 
@@ -265,18 +265,18 @@ button[type="submit"]:hover {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    margin-right: 10px;/* Geser ikon ke kiri dari bubble */
+    margin-right: 10px;/* Geser icon ke kiri dari bubble */
 }
 
 .bot-message {
     margin-left: 10px;
     background-color: #805932;
-    align-self: flex-start; /* Bot message di kiri */
+    align-self: flex-start; /* Bot message ada di kiri */
     justify-self: flex-start;
 }
 
 .user-message {
-    align-self: flex-end; /* User message di kanan */
+    align-self: flex-end; /* User message ada di kanan */
     justify-self: flex-end; 
     border: 1.5px solid #805932; 
     border-radius: 1.0vw 0vw 1.5vw 1.8vw;
