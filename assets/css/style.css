@@ -913,6 +913,79 @@ link:focus,
 }
 
 /* /teacher */
+
+/* Styles for team cards */
+.team-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card .social-icons {
+  position: absolute;
+  bottom: -60px; /* Menempatkan ikon di bawah card secara default */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease-in-out; /* Transisi animasi */
+  display: flex;
+  gap: 10px;
+}
+
+.team-card:hover .social-icons {
+  bottom: 20px; /* Tempatkan ikon sedikit di atas bagian bawah card saat di-hover */
+  transform: translateY(-10px);
+}
+
+.team-card:hover .social-icons {
+  bottom: 20px; /* Tempatkan ikon sedikit di atas bagian bawah card saat di-hover */
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Social icons container */
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: flex;
+  gap: 10px;
+}
+
+/* Show social icons with animation when hovering */
+.team-card:hover .social-icons {
+  opacity: 1;
+  transform: translateY(-10px) translateX(-50%);
+}
+
+/* Style for social icons */
+.social-icons a {
+  color: #333; /* Atur warna ikon */
+  font-size: 1.5rem; /* Atur ukuran ikon */
+  text-decoration: none; /* Hilangkan garis bawah pada tautan */
+  transition: color 0.3s ease-in-out; /* Transisi warna ikon */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Ubah warna saat hover */
+}
+
+
+
 /* footer */
 .newsletter {
   background-image: linear-gradient(to right, transparent 50%, #4d3202 50%);
