@@ -880,7 +880,6 @@ link:focus,
 }
 .card-body {
   text-align: center;
-  padding-bottom: 3rem;
 }
 .card-title {
   margin-top: 10px;
@@ -943,6 +942,7 @@ link:focus,
 
 .card-body {
   padding: 1.5rem;
+  padding-bottom: 4rem;
 }
 
 .card-title {
@@ -974,17 +974,6 @@ link:focus,
 }
 
 /* Style for social icons */
-.social-icons a {
-  color: #333 !important; /* Pastikan warna ikon */
-  font-size: 1.5rem !important; /* Pastikan ukuran ikon */
-  text-decoration: none !important; /* Pastikan tidak ada garis bawah */
-  transition: color 0.3s ease-in-out !important; /* Pastikan transisi warna */
-}
-
-.social-icons a:hover {
-  color: #007bff; /* Ubah warna saat hover */
-}
-
 .social-icons {
   position: absolute;
   bottom: 0;
@@ -1011,7 +1000,8 @@ link:focus,
 }
 
 .social-icons a:hover {
-  color: #4d3202; 
+  color: blue; 
+  background-color: white; 
 }
 
 
