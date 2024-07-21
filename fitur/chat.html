@@ -32,38 +32,42 @@
             <a href="#">Option 3</a>
         </div>
     </div>
-    </div>
+</div>
 
-    <!-- Main content -->
-    <div class="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>  
-    </div>
+<!-- Main content -->
+<div class="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>  
+</div>
 
-    <!-- Chat container -->
-    <div class="chat-container" id="chat-container">
-        <div class="chat-header">
-            <div class="header-content">
-                <h2>Gasydisal Bot</h2>
-                <!-- Logout button -->
-                <button class="logout-btn" onclick="logout()">
-                    <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
-                </button>
-            </div>
-        </div>
-        <div class="chat-body" id="chat-body">
-            <div class="message-container bot-message-container">
-                <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
-                <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
-            </div>
-        </div>
-        <div class="chat-footer">
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button onclick="sendMessage()"><b>Send</b></button>
+<!-- Chat container -->
+<div class="chat-container" id="chat-container">
+    <div class="chat-header">
+        <div class="header-content">
+            <h2>Gasydisal Bot</h2>
+            <!-- Logout button -->
+            <button class="logout-btn" onclick="logout()">
+                <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+            </button>
         </div>
     </div>
+    <div class="chat-body" id="chat-body">
+        <!-- Logo -->
+        <div class="chat-logo">
+            <img src="../assets/gambar/logo.png" alt="Gasydisal Bot Logo" width="100">
+        </div>
+        <div class="message-container bot-message-container">
+            <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
+            <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
+        </div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()"><b>Send</b></button>
+    </div>
+</div>
 
-    <script src="../assets/js/cht.js"></script>
-    <script src="../assets/js/jquery.min.js"></script>
-    <script src="../assets/js/jquery.filterizr.min.js"></script>
+<script src="../assets/js/cht.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.filterizr.min.js"></script>
 </body>
 </html>
