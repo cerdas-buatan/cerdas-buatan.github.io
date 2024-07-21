@@ -974,15 +974,16 @@ link:focus,
 
 /* Style for social icons */
 .social-icons a {
-  color: #333; /* Atur warna ikon */
-  font-size: 1.5rem; /* Atur ukuran ikon */
-  text-decoration: none; /* Hilangkan garis bawah pada tautan */
-  transition: color 0.3s ease-in-out; /* Transisi warna ikon */
+  color: #333 !important; /* Pastikan warna ikon */
+  font-size: 1.5rem !important; /* Pastikan ukuran ikon */
+  text-decoration: none !important; /* Pastikan tidak ada garis bawah */
+  transition: color 0.3s ease-in-out !important; /* Pastikan transisi warna */
 }
 
 .social-icons a:hover {
   color: #007bff; /* Ubah warna saat hover */
 }
+
 
 
 
