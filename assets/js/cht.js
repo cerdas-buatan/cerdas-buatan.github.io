@@ -49,10 +49,6 @@ function addBotImage(messageContainer) {
 function getBotResponse() {
     const responses = [
         "That's funny! 😂",
-        /*"I see what you did there! 😜",
-        "Tell me more! 🤔",
-        "Haha, good one! 😄",
-        "You’re hilarious! 🤣"*/
         "I see what you did there! 😜",
         "Tell me more! 🤔",
         "Haha, good one! 😄",
