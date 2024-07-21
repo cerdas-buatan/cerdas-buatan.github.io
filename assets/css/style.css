@@ -879,7 +879,8 @@ link:focus,
   margin: 0 auto; /* Memusatkan foto */
 }
 .card-body {
-  text-align: center; /* Memusatkan teks di dalam card body */
+  text-align: center;
+  padding-bottom: 3rem;
 }
 .card-title {
   margin-top: 10px;
@@ -982,6 +983,35 @@ link:focus,
 
 .social-icons a:hover {
   color: #007bff; /* Ubah warna saat hover */
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1rem; /* Ruang sekitar ikon sosial media */
+  background: rgba(255, 255, 255, 0.8); /* Latar belakang semi-transparan untuk ikon */
+  transform: translateY(100%); /* Menyembunyikan ikon sosial media di bawah kartu */
+  transition: transform 0.3s ease-in-out; 
+}
+
+.team-card:hover .social-icons {
+  transform: translateY(0); 
+}
+
+.social-icons a {
+  margin: 0 0.5rem; 
+  color: #333; 
+  font-size: 1.5rem;
+  text-decoration: none; 
+  transition: color 0.3s ease; 
+}
+
+.social-icons a:hover {
+  color: #4d3202; 
 }
 
 
