@@ -61,10 +61,6 @@ function addBotImage(messageContainer) {
 function getBotResponse() {
     const responses = [
         "That's funny! 😂",
-        /*"I see what you did there! 😜",
-        "Tell me more! 🤔",
-        "Haha, good one! 😄",
-        "You’re hilarious! 🤣"*/
         "I see what you did there! 😜",
         "Tell me more! 🤔",
         "Haha, good one! 😄",
@@ -84,14 +80,14 @@ function closeNav() {
 
 function logout() {
     Swal.fire({
-        title: 'Are you sure you want to logout?',
+        title: 'Kamu yakin mau logout?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Yes',
         cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = '../index.html'; // Mengarahkan pengguna ke halaman index.html
+            window.location.href = '../index.html'; 
         }
     });
 }
