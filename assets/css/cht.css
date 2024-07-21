@@ -99,16 +99,6 @@ body{
 .chat-logo img {
     width: 100px; /* Adjust the size as needed */
 }
-
-.ellipsis-icon {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.ellipsis-icon i {
-    font-size: 24px;
-    color: #000; /* Adjust the color as needed */
-}
   
 /* Main content styles */
 .main {
