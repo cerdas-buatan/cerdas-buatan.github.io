@@ -20,7 +20,7 @@ body{
     transition: 0.3s;
     z-index: 1000; /* Ensure it overlays main content */
 }
-    
+
 .sidebar-header {
     padding: 10px;
     text-align: center;
@@ -62,12 +62,13 @@ body{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s;
 }
 
 .options-menu a:hover {
     background-color: #f1f1f1;
 }
-    
+
 .sidebar a {
     padding: 8px 20px;
     text-decoration: none;
@@ -76,19 +77,56 @@ body{
     display: block;
     transition: 0.3s;
 }
-    
+
 .sidebar a:hover {
     background-color: #805932;
 }
-    
+
 .sidebar .closebtn {
-    position: absolute;
+    /* position: absolute;
     top: 10px;
     right: 25px;
     font-size: 36px;
     color: white;
     background-color: #805932;
     cursor: pointer;
+    transition: background-color 0.3s;  */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1005;
+    transition: 0.5s;
+}
+
+.sidebar .closebtn:hover {
+    background-color: #353516a9; /* Change color on hover */
+}
+
+.options-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.options-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.options-menu a:hover {
+    background-color: #f1f1f1; /* Change color on hover */
 }
 
 /* Center the logo in the chat body */
