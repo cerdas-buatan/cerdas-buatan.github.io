@@ -960,28 +960,30 @@ link:focus,
   font-size: 0.875rem;
   margin-bottom: 1rem;
 } */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: orange; }
-}
-
-.typing-effect {
+.shimmer {
+  background: linear-gradient(
+    to right,
+    #f8f8f8 0%,
+    #e8e8e8 20%,
+    #f8f8f8 40%,
+    #f8f8f8 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s linear infinite;
   display: inline-block;
-  white-space: pre-wrap; /* Allow wrapping to new lines */
-  border-right: .15em solid orange;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-  overflow: hidden;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-
-.typing-effect.done {
-  border-right: none; /* Remove cursor after typing effect is done */
-}
-
 
 /* Social icons container */
 .social-icons {
