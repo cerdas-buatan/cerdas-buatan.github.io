@@ -82,6 +82,23 @@ body{
     background-color: #805932;
 }
 
+.openbtn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1005;
+    transition: 0.5s;
+}
+    
+.openbtn:hover {
+    background-color: #353516a9;
+}
+
 .sidebar .closebtn {
     /* position: absolute;
     top: 10px;
@@ -96,7 +113,8 @@ body{
     right: 10px;
     background-color: transparent;
     color: black;
-    border: none;
+    border: px;
+    border-radius: 46%;
     padding: 15px;
     cursor: pointer;
     z-index: 1005;
@@ -189,23 +207,7 @@ body{
 .main {
     transition: margin-left 0.3s;
 }
-    
-.openbtn {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: transparent;
-    color: black;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 1005;
-    transition: 0.5s;
-}
-    
-.openbtn:hover {
-    background-color: #353516a9;
-}
+
             
 .message-container {
     display: flex;
