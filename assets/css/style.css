@@ -950,11 +950,31 @@ link:focus,
   margin-bottom: 0.5rem;
 }
 
-.card-text {
+/* .card-text {
   font-size: 0.875rem;
   margin-bottom: 1rem;
+} */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.typing-effect {
+  display: inline-block;
+  white-space: pre-wrap; /* Allow wrapping to new lines */
+  border-right: .15em solid orange;
+  animation: blink-caret .75s step-end infinite;
+  overflow: hidden;
+}
+
+.typing-effect.done {
+  border-right: none; /* Remove cursor after typing effect is done */
+}
 /* Social icons container */
 .social-icons {
   position: absolute;
