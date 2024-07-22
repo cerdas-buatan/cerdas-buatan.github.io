@@ -6,8 +6,6 @@
  */
 
 
-
-
 (function ($) {
 	'use strict';
 
@@ -112,3 +110,25 @@
 	});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+	const elements = document.querySelectorAll('.typing-effect');
+  
+	elements.forEach((el) => {
+	  const text = el.getAttribute('data-text');
+	  let index = 0;
+  
+	  const type = () => {
+		if (index < text.length) {
+		  el.textContent += text.charAt(index);
+		  index++;
+		  setTimeout(type, 50); // Adjust typing speed here
+		} else {
+		  el.classList.add('done'); // Remove cursor
+		}
+	  };
+  
+	  type();
+	});
+  });
+  
