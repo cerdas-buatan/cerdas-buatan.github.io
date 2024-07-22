@@ -1,38 +1,38 @@
-import { getValue } from "https://jscroot.github.io/element/croot.js";
-
-async function postLogin(target_url, data) {
-  try {
-    const requestOptions = {
+  import { getValue } from "https://jscroot.github.io/element/croot.js";
+  import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
+  
+  function postWithToken(target_url, datajson, responseFunction) {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+  
+    var raw = JSON.stringify(datajson);
+  
+    var requestOptions = {
       method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: myHeaders,
+      body: raw,
       redirect: "follow",
     };
-
-    const response = await fetch(target_url, requestOptions);
-    const result = await response.text();
-    return JSON.parse(result);
-  } catch (error) {
-    console.error("Error:", error);
-    return { error: true, message: "Failed to connect to the server." };
+  
+    fetch(target_url, requestOptions)
+      .then((response) => response.text())
+      .then((result) => responseFunction(JSON.parse(result)))
+      .catch((error) => console.log("error", error));
   }
-}
-
-const Login = async () => {
-  showLoadingOverlay();
-  const target_url = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/loginai";
-
-  const data = {
-    email: getValue("username"),
-    password: getValue("password"),
+  
+  const PostSignIn = () => {
+    showLoadingOverlay();
+    const target_url =
+      "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/loginai";
+    const datainjson = {
+      email: getValue("email"),
+      password: getValue("password"),
+    };
+  
+    postWithToken(target_url, datainjson, responseData);
   };
-
-  const result = await postLogin(target_url, data);
-  responseData(result);
-};
-
+  
+  
 function showLoadingOverlay() {
   document.getElementById('loader-wrapper').style.display = 'flex';
 }
@@ -41,30 +41,39 @@ function hideLoadingOverlay() {
   document.getElementById('loader-wrapper').style.display = 'none';
 }
 
-function responseData(result) {
-  hideLoadingOverlay();
-  if (!result.error) {
-    Swal.fire({
-      icon: "success",
-      title: "Login Successful",
-      text: result.message,
-      showConfirmButton: false,
-      timer: 1500,
-    }).then(() => {
-      window.location.href = "./home.html";
-    });
-  } else {
-    Swal.fire({
-      icon: "error",
-      title: "Login Failed",
-      text: result.message,
-      showConfirmButton: false,
-      timer: 1500,
-    });
-  }
-}
-
-// Hide overlay when the page is fully loaded
+  const responseData = (result) => {
+    hideLoadingOverlay();
+    if (result.token) {
+      // Jika memiliki token, simpan token di cookie
+      setCookieWithExpireHour("Authorization", result.token, 2);
+      // Tampilkan SweetAlert berhasil login
+      Swal.fire({
+        icon: "success",
+        title: "Login Successful",
+        text: "You have successfully logged in...",
+      }).then(() => {
+        // Redirect based on the user role
+        if (result.role === "pengguna") {
+          window.location.href = "./pengguna/index.html";
+        } else if (result.role === "admin") {
+          window.location.href = "./admin/index.html";
+        } else {
+          // Handle other roles or scenarios if needed
+          // For example, redirect to a default page or show an error message
+          console.error("Unknown user role:", result.role);
+        }
+      });
+    } else {
+      // Jika tidak memiliki token, tampilkan SweetAlert pesan kesalahan
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+        text: result.message,
+      });
+    }
+  };
+  
+  // Hide overlay when the page is fully loaded
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
     setTimeout(function () {
@@ -73,4 +82,4 @@ document.onreadystatechange = function () {
   }
 };
 
-document.getElementById("button").addEventListener("click", Login);
+  window.PostSignIn = PostSignIn;
