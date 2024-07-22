@@ -52,16 +52,7 @@ function hideLoadingOverlay() {
         title: "Login Successful",
         text: "You have successfully logged in...",
       }).then(() => {
-        // Redirect based on the user role
-        if (result.role === "pengguna") {
-          window.location.href = "./pengguna/index.html";
-        } else if (result.role === "admin") {
-          window.location.href = "./admin/index.html";
-        } else {
-          // Handle other roles or scenarios if needed
-          // For example, redirect to a default page or show an error message
-          console.error("Unknown user role:", result.role);
-        }
+        window.location.href = "./home.html";
       });
     } else {
       // Jika tidak memiliki token, tampilkan SweetAlert pesan kesalahan
