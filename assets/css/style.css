@@ -972,13 +972,13 @@ link:focus,
 .shimmer {
   background: linear-gradient(
     to right,
-    #f8f8f8 0%,
+    black 0%,
     #e8e8e8 20%,
     #f8f8f8 40%,
     #f8f8f8 100%
   );
-  background-size: 1000px 100%;
-  animation: shimmer 2s linear infinite;
+  background-size: 5000px 100%;
+  animation: shimmer 5s linear 1; /* Animation runs for 2 seconds and repeats 2 times */
   display: inline-block;
   color: transparent;
   background-clip: text;
