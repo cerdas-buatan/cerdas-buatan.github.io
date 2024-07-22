@@ -940,9 +940,15 @@ link:focus,
   bottom: 20px; /* Tempatkan ikon sedikit di atas bagian bawah card saat di-hover */
 }
 
+/* .card-body {
+  padding: 1.5rem;
+  padding-bottom: 4rem;
+} */
 .card-body {
   padding: 1.5rem;
   padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-title {
@@ -968,13 +974,15 @@ link:focus,
   display: inline-block;
   white-space: pre-wrap; /* Allow wrapping to new lines */
   border-right: .15em solid orange;
-  animation: blink-caret .75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
   overflow: hidden;
 }
 
 .typing-effect.done {
   border-right: none; /* Remove cursor after typing effect is done */
 }
+
+
 /* Social icons container */
 .social-icons {
   position: absolute;

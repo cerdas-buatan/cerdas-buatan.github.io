@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		if (index < text.length) {
 		  el.textContent += text.charAt(index);
 		  index++;
-		  setTimeout(type, 50); // Adjust typing speed here
+		  setTimeout(type, 100); // Adjust typing speed here
 		} else {
 		  el.classList.add('done'); // Remove cursor
 		}
@@ -131,4 +131,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	  type();
 	});
   });
+  
   
