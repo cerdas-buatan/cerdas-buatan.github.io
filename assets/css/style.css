@@ -917,8 +917,16 @@ link:focus,
 /* Styles for team cards */
 .team-card {
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Black shadow */
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow;
+  margin: 15px; 
+  border-radius: 10px; 
+}
+
+.team-card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .team-card .social-icons {
@@ -954,10 +962,6 @@ link:focus,
 .card-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-}
-
-.card-img-top.rounded-circle {
-  border-radius: 10px; /* Makes images circular */
 }
 
 /* .card-text {
@@ -1021,10 +1025,6 @@ link:focus,
   transition: transform 0.3s ease-in-out; 
 }
 
-.team-card:hover .social-icons {
-  transform: translateY(0); 
-}
-
 .social-icons a {
   margin: 0 0.5rem; 
   color: #333; 
@@ -1061,9 +1061,13 @@ link:focus,
   color: #333; /* GitHub black */
 }
 
-.card-img-top.rounded-img {
-  border-radius: 15px; 
+.card-img-top {
+  border-radius: 5px 5px 0 0; /* Rounded top corners for the image */
 }
+
+/* .card-img-top.rounded-img {
+  border-radius: 15px; 
+} */
 
 
 /* footer */
