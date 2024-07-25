@@ -62,3 +62,12 @@ const PostSignIn = () => {
         });
       }
     };
+
+      // Hide overlay when the page is fully loaded
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+      setTimeout(function () {
+        document.getElementById('loader-wrapper').style.display = 'none';
+      }, 2000); // Adjust timeout to match CSS animation duration
+    }
+  };
