@@ -36,3 +36,6 @@ const PostSignIn = () => {
     document.getElementById('loader-wrapper').style.display = 'flex';
   }
   
+  function hideLoadingOverlay() {
+    document.getElementById('loader-wrapper').style.display = 'none';
+  }
