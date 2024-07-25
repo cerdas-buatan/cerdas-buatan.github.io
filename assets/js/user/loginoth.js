@@ -53,4 +53,12 @@ const PostSignIn = () => {
       }).then(() => {
         window.location.href = "./home.html";
       });
-    }
+    }else {
+        // Jika tidak memiliki token, tampilkan SweetAlert pesan kesalahan
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: result.message,
+        });
+      }
+    };
