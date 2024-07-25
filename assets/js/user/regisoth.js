@@ -39,3 +39,7 @@ async function postRegister(target_url, data) {
     const result = await postRegister(target_url, data);
     responseData(result);
   };
+
+  function showLoadingOverlay() {
+    document.getElementById('loader-wrapper').style.display = 'flex';
+  }
