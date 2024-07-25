@@ -31,3 +31,8 @@ const PostSignIn = () => {
   
     postWithToken(target_url, datainjson, responseData);
   };
+
+  function showLoadingOverlay() {
+    document.getElementById('loader-wrapper').style.display = 'flex';
+  }
+  
