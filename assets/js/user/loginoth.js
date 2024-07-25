@@ -19,3 +19,15 @@ function postWithToken(target_url, datajson, responseFunction) {
     .then((result) => responseFunction(JSON.parse(result)))
     .catch((error) => console.log("error", error));
 }
+
+const PostSignIn = () => {
+    showLoadingOverlay();
+    const target_url =
+      "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/loginai";
+    const datainjson = {
+      email: getValue("email"),
+      password: getValue("password"),
+    };
+  
+    postWithToken(target_url, datainjson, responseData);
+  };
