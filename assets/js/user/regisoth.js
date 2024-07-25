@@ -60,4 +60,13 @@ async function postRegister(target_url, data) {
       }).then(() => {
         window.location.href = "./login.html";
       });
+    }else {
+        Swal.fire({
+          icon: "error",
+          title: "Register Failed",
+          text: result.message,
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      }
     }
