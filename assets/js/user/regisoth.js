@@ -47,3 +47,17 @@ async function postRegister(target_url, data) {
   function hideLoadingOverlay() {
     document.getElementById('loader-wrapper').style.display = 'none';
   }
+
+  function responseData(result) {
+    hideLoadingOverlay();
+    if (!result.error) {
+      Swal.fire({
+        icon: "success",
+        title: "Register Successful",
+        text: result.message,
+        showConfirmButton: false,
+        timer: 1000,
+      }).then(() => {
+        window.location.href = "./login.html";
+      });
+    }
