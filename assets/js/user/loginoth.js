@@ -39,3 +39,18 @@ const PostSignIn = () => {
   function hideLoadingOverlay() {
     document.getElementById('loader-wrapper').style.display = 'none';
   }
+
+  const responseData = (result) => {
+    hideLoadingOverlay();
+    if (result.token) {
+      // Jika memiliki token, simpan token di cookie
+      setCookieWithExpireHour("Authorization", result.token, 2);
+      // Tampilkan SweetAlert berhasil login
+      Swal.fire({
+        icon: "success",
+        title: "Login Successful",
+        text: "You have successfully logged in...",
+      }).then(() => {
+        window.location.href = "./home.html";
+      });
+    }
