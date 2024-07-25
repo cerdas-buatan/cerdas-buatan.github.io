@@ -10,3 +10,12 @@ async function postRegister(target_url, data) {
         },
         redirect: 'follow'
       };
+
+      const response = await fetch(target_url, requestOptions);
+      const result = await response.text();
+      return JSON.parse(result);
+    } catch (error) {
+      console.error('Error:', error);
+      return { error: true, message: "Failed to connect to the server." };
+    }
+  }
