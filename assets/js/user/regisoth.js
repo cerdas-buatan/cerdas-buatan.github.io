@@ -19,3 +19,19 @@ async function postRegister(target_url, data) {
       return { error: true, message: "Failed to connect to the server." };
     }
   }
+
+  const Register = async () => {
+    showLoadingOverlay();
+    const target_url = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/registeraii";
+    
+    const username = getValue("username");
+    const email = getValue("email");
+    const password = getValue("password");
+  
+    const data = {
+      username: username,
+      akun: {
+        email: email,
+        password: password
+      }
+    };
