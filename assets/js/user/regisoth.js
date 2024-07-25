@@ -35,3 +35,7 @@ async function postRegister(target_url, data) {
         password: password
       }
     };
+
+    const result = await postRegister(target_url, data);
+    responseData(result);
+  };
