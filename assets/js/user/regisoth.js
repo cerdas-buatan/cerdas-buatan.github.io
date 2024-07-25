@@ -43,3 +43,7 @@ async function postRegister(target_url, data) {
   function showLoadingOverlay() {
     document.getElementById('loader-wrapper').style.display = 'flex';
   }
+
+  function hideLoadingOverlay() {
+    document.getElementById('loader-wrapper').style.display = 'none';
+  }
