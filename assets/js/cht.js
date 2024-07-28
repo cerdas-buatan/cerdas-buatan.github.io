@@ -20,19 +20,22 @@ function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() === '') return;
     const chatBody = document.getElementById('chat-body');
+
     // Add user message to chat
     const userMessageContainer = document.createElement('div');
     userMessageContainer.className = 'message-container user-message-container';
     const userMessage = document.createElement('p');
     userMessage.className = 'user-message';
     userMessage.textContent = userInput;
-    chatBody.appendChild(userMessage);
-    chatBody.appendChild(userMessageContainer);
+    userMessageContainer.appendChild(userMessage); // Append user message to container
+    chatBody.appendChild(userMessageContainer); // Append container to chat body
+
     // Clear the input field
     document.getElementById('user-input').value = '';
+
     // Scroll to the bottom of chat
     chatBody.scrollTop = chatBody.scrollHeight;
-    
+
     // Simulate bot response
     setTimeout(() => {
         const botMessageContainer = document.createElement('div');
@@ -47,18 +50,20 @@ function sendMessage() {
         botMessageContainer.appendChild(botMessageIcon);
         botMessageContainer.appendChild(botMessage);
         chatBody.appendChild(botMessageContainer);
-        
+
         // Scroll to the bottom of chat
         chatBody.scrollTop = chatBody.scrollHeight;
     }, 1000);
 }
+
 function addBotImage(messageContainer) {
     const botIcon = document.createElement('img');
     botIcon.src = '../gambar/panda.png';
     botIcon.alt = 'Bot Icon';
     botIcon.className = 'message-icon';
     messageContainer.appendChild(botIcon);
-  }
+}
+
 function getBotResponse() {
     const responses = [
         "That's funny! 😂",
@@ -68,11 +73,13 @@ function getBotResponse() {
     ];
     return responses[Math.floor(Math.random() * responses.length)];
 }
+
 function openNav() {
     document.getElementById("mySidebar").style.left = "0";
     document.querySelector(".main").style.marginLeft = "3px";
     document.querySelector(".chat-container").style.marginLeft = "250px";
 }
+
 function closeNav() {
     document.getElementById("mySidebar").style.left = "-250px";
     document.querySelector(".main").style.marginLeft = "0";
@@ -92,3 +99,41 @@ function logout() {
         }
     });
 }
+
+// Function to toggle button visibility based on login status
+function checkLoginStatus() {
+    const userLogin = getCookie("user_login");
+    const loginButton = document.querySelector(".sidebar-buttons .sidebar-btn");
+    const logoutButton = document.querySelector("#logoutButton");
+    const profilePicture = document.querySelector("#profile-picture");
+
+    if (userLogin) {
+        loginButton.style.display = "none";
+        logoutButton.style.display = "block";
+        profilePicture.style.display = "block";
+        profilePicture.src = localStorage.getItem('profilePicture'); // Set profile picture from localStorage
+    } else {
+        loginButton.style.display = "block";
+        logoutButton.style.display = "none";
+        profilePicture.style.display = "none";
+        profilePicture.src = ""; // Clear profile picture
+    }
+}
+
+// DOMContentLoaded event to set welcome message and check login status
+document.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('username');
+    if (username) {
+        const defaultTextContainer = document.querySelector('.default-text');
+        defaultTextContainer.innerHTML = `<h1>Selamat Datang, ${username}</h1>`;
+    }
+    checkLoginStatus();
+});
+
+// Utility function to get cookie value by name
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
