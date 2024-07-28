@@ -10,6 +10,7 @@
 // }
 
 // Function to toggle button visibility based on login status
+// Function to toggle button visibility based on login status
 function checkLoginStatus() {
     const userLogin = getCookie("user_login");
     const loginButton = document.querySelector(".sidebar-buttons .sidebar-btn");
@@ -38,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     checkLoginStatus();
 });
-
 
 document.getElementById('user-input').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
@@ -134,6 +134,29 @@ function logout() {
             window.location.href = '../index.html'; 
         }
     });
+}
+
+function toggleOptionsMenu() {
+    const optionsMenu = document.getElementById('options-menu');
+    if (optionsMenu.style.display === 'block') {
+        optionsMenu.style.display = 'none';
+    } else {
+        fetch('/api/options')
+            .then(response => response.json())
+            .then(data => {
+                optionsMenu.innerHTML = ''; // Clear current options
+                data.forEach(option => {
+                    const optionItem = document.createElement('div');
+                    optionItem.className = 'option-item';
+                    optionItem.textContent = option.name;
+                    optionsMenu.appendChild(optionItem);
+                });
+                optionsMenu.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching options:', error);
+            });
+    }
 }
 
 
