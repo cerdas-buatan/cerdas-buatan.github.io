@@ -137,27 +137,25 @@ function logout() {
 }
 
 function toggleOptionsMenu() {
-    const optionsMenu = document.getElementById('options-menu');
-    if (optionsMenu.style.display === 'block') {
-        optionsMenu.style.display = 'none';
+    const optionsMenu = document.getElementById("optionsMenu");
+    if (optionsMenu.style.display === "block") {
+        optionsMenu.style.display = "none";
     } else {
-        fetch('')
-            .then(response => response.json())
-            .then(data => {
-                optionsMenu.innerHTML = '';
-                data.forEach(option => {
-                    const optionItem = document.createElement('div');
-                    optionItem.className = 'option-item';
-                    optionItem.textContent = option.name;
-                    optionsMenu.appendChild(optionItem);
-                });
-                optionsMenu.style.display = 'block';
-            })
-            .catch(error => {
-                console.error('Error fetching options:', error);
-            });
+        optionsMenu.style.display = "block";
+        setTimeout(() => {
+            optionsMenu.style.display = "none";
+        }, 3000); // 3000 ms = 3 seconds
     }
 }
+
+document.addEventListener('click', function(event) {
+    const optionsMenu = document.getElementById("optionsMenu");
+    const isClickInside = optionsMenu.contains(event.target) || event.target.matches('.popup-menu');
+
+    if (!isClickInside) {
+        optionsMenu.style.display = "none";
+    }
+});
 
 
 
