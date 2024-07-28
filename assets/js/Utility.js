@@ -1,3 +1,7 @@
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+}
+
 // Utility function to get cookie value by name
 function getCookie(name) {
     const value = `; ${document.cookie}`;
