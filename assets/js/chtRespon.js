@@ -40,7 +40,7 @@ const getChatResponse = async (incomingChatDiv) => {
         // Replace spaces with underscores
         userText = userText.replace(/ /g, "_");
     }
-    const API_URL = `https://asia-southeast2-gis-project-401902.cloudfunctions.net/backend-ai/chatRegexp?key=${userText}`;
+    const API_URL = `key=${userText}`;
     const pElement = document.createElement("p");
 
     // Define the properties and data for the API request
