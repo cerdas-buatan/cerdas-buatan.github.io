@@ -1,5 +1,6 @@
+// Utility function to delete a cookie by name
 function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = name + '=; expires=' + new Date().toUTCString() + '; path=/;';
 }
 
 // Utility function to get cookie value by name
