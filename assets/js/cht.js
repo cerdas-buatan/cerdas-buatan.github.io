@@ -127,10 +127,10 @@ function logout() {
             confirmButton: 'btn-confirm',
             cancelButton: 'btn-cancel'
         },
-        buttonsStyling: false // Disable default styles
+        buttonsStyling: false 
     }).then((result) => {
         if (result.isConfirmed) {
-            deleteCookie('user_login'); // Clear login cookie on logout
+            deleteCookie('user_login'); 
             window.location.href = '../index.html'; 
         }
     });
@@ -141,10 +141,10 @@ function toggleOptionsMenu() {
     if (optionsMenu.style.display === 'block') {
         optionsMenu.style.display = 'none';
     } else {
-        fetch('/api/options')
+        fetch('')
             .then(response => response.json())
             .then(data => {
-                optionsMenu.innerHTML = ''; // Clear current options
+                optionsMenu.innerHTML = '';
                 data.forEach(option => {
                     const optionItem = document.createElement('div');
                     optionItem.className = 'option-item';
