@@ -122,7 +122,12 @@ function logout() {
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Yes',
-        cancelButtonText: 'No'
+        cancelButtonText: 'No',
+        customClass: {
+            confirmButton: 'btn-confirm',
+            cancelButton: 'btn-cancel'
+        },
+        buttonsStyling: false // Disable default styles
     }).then((result) => {
         if (result.isConfirmed) {
             deleteCookie('user_login'); // Clear login cookie on logout
@@ -130,6 +135,7 @@ function logout() {
         }
     });
 }
+
 
 
 // function logout() {
