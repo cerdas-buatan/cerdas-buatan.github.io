@@ -94,15 +94,56 @@ function addBotImage(messageContainer) {
     messageContainer.appendChild(botIcon);
 }
 
-function getBotResponse() {
-    const responses = [
-        "That's funny! 😂",
-        "I see what you did there! 😜",
-        "Tell me more! 🤔",
-        "Haha, good one! 😄",
-    ];
-    return responses[Math.floor(Math.random() * responses.length)];
+document.getElementById("send-btn").addEventListener("click", sendMessage);
+
+function sendMessage() {
+    const input = document.getElementById("chat-input");
+    const message = input.value.trim();
+    if (message) {
+        addMessageToChat("outgoing", message);
+        input.value = "";
+        document.getElementById("send-btn").style.display = "none";
+        document.querySelector(".chat-logo").style.display = "none";
+
+        setTimeout(() => {
+            addMessageToChat("incoming", getBotResponse());
+            document.getElementById("send-btn").style.display = "block";
+            document.querySelector(".chat-logo").style.display = "block";
+        }, 1000); // Simulate a delay for bot response
+    }
 }
+
+function addMessageToChat(type, message) {
+    const chatContainer = document.querySelector(".chat-body");
+    const chatDiv = document.createElement("div");
+    chatDiv.classList.add("message-container", type === "outgoing" ? "user-message-container" : "bot-message-container");
+
+    const messageParagraph = document.createElement("p");
+    messageParagraph.classList.add(type === "outgoing" ? "user-message" : "bot-message");
+    messageParagraph.textContent = message;
+
+    if (type === "incoming") {
+        const botMessageIcon = document.createElement('img');
+        botMessageIcon.src = '../assets/gambar/panda.png';
+        botMessageIcon.alt = 'Bot Icon';
+        botMessageIcon.className = 'message-icon';
+        chatDiv.appendChild(botMessageIcon);
+    }
+
+    chatDiv.appendChild(messageParagraph);
+    chatContainer.appendChild(chatDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+// function getBotResponse() {
+//     const responses = [
+//         "That's funny! 😂",
+//         "I see what you did there! 😜",
+//         "Tell me more! 🤔",
+//         "Haha, good one! 😄",
+//     ];
+//     return responses[Math.floor(Math.random() * responses.length)];
+// }
 
 function openNav() {
     document.getElementById("mySidebar").style.left = "0";
