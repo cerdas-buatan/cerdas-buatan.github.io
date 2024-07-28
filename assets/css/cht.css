@@ -8,11 +8,11 @@ body{
     margin: 0;
 }
 
-.header-content {
+/* .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
 .profile-picture {
     margin-right: 10px;
