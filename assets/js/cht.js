@@ -135,18 +135,22 @@ function logout() {
         }
     });
 }
-
 function toggleOptionsMenu() {
-    const optionsMenu = document.getElementById("optionsMenu");
-    if (optionsMenu.style.display === "block") {
-        optionsMenu.style.display = "none";
-    } else {
-        optionsMenu.style.display = "block";
-        setTimeout(() => {
-            optionsMenu.style.display = "none";
-        }, 3000); // 3000 ms = 3 seconds
-    }
+    document.getElementById("optionsMenu").classList.toggle("show");
 }
+
+
+// function toggleOptionsMenu() {
+//     const optionsMenu = document.getElementById("optionsMenu");
+//     if (optionsMenu.style.display === "block") {
+//         optionsMenu.style.display = "none";
+//     } else {
+//         optionsMenu.style.display = "block";
+//         setTimeout(() => {
+//             optionsMenu.style.display = "none";
+//         }, 3000); // 3000 ms = 3 seconds
+//     }
+// }
 
 document.addEventListener('click', function(event) {
     const optionsMenu = document.getElementById("optionsMenu");
@@ -156,6 +160,35 @@ document.addEventListener('click', function(event) {
         optionsMenu.style.display = "none";
     }
 });
+function renameMenu() {
+    const newName = prompt("Enter new menu name:");
+    if (newName) {
+        // Perform the rename operation
+        alert("Menu renamed to: " + newName);
+    }
+}
+
+function deleteMenu() {
+    if (confirm("Are you sure you want to delete this menu?")) {
+        // Perform the delete operation
+        alert("Menu deleted");
+    }
+}
+
+function archiveMenu() {
+    if (confirm("Are you sure you want to move this menu to archive?")) {
+        // Perform the archive operation
+        alert("Menu moved to archive");
+    }
+}
+
+function addMenu() {
+    const menuName = prompt("Enter new menu name:");
+    if (menuName) {
+        // Perform the add menu operation
+        alert("New menu added: " + menuName);
+    }
+}
 
 
 
