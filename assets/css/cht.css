@@ -109,14 +109,6 @@ body{
 }
 
 .sidebar .closebtn {
-    /* position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 36px;
-    color: white;
-    background-color: #805932;
-    cursor: pointer;
-    transition: background-color 0.3s;  */
     position: absolute;
     top: 10px;
     right: 10px;
