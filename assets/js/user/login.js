@@ -52,7 +52,7 @@ function hideLoadingOverlay() {
         title: "Login Successful",
         text: "You have successfully logged in...",
       }).then(() => {
-        window.location.href = "./home.html";
+        window.location.href = "./chat.html";
       });
     } else {
       // Jika tidak memiliki token, tampilkan SweetAlert pesan kesalahan
