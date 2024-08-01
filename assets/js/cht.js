@@ -149,31 +149,48 @@ function toggleSidebar() {
     const sidebar = document.getElementById("mySidebar");
     const main = document.querySelector(".main");
     const chatContainer = document.querySelector(".chat-container");
-    const sidebarWidth = "198px"; // Width of the sidebar
+    const sidebarWidth = "245px"; // Width of the sidebar
 
-    if (sidebar.style.left === "0px") {
+    if (sidebar.classList.contains("open")) {
+        // Close the sidebar
         sidebar.style.left = `-${sidebarWidth}`;
+        sidebar.classList.remove("open");
         main.style.marginLeft = "0";
-        chatContainer.style.marginLeft = "0";
+        chatContainer.style.marginLeft = "0"; // Keep chat container in place
     } else {
+        // Open the sidebar
         sidebar.style.left = "0px";
-        main.style.marginLeft = sidebarWidth;
-        chatContainer.style.marginLeft = sidebarWidth; // Align directly with sidebar
+        sidebar.classList.add("open");
+        main.style.marginLeft = sidebarWidth; // Shift the main content
+        chatContainer.style.marginLeft = sidebarWidth; // Align chat container with sidebar
     }
 }
-
-
 
 
 
 function toggleOptionsMenu() {
     const optionsMenu = document.getElementById("optionsMenu");
+    const delay = 100; // Time in milliseconds (e.g., 300ms delay)
+
     if (optionsMenu.style.display === "block") {
-        optionsMenu.style.display = "none";
+        // Add a delay before hiding the menu
+        setTimeout(() => {
+            optionsMenu.style.display = "none";
+        }, delay);
     } else {
+        // Immediately show the menu
         optionsMenu.style.display = "block";
+        // Optionally, you can also reset the display state immediately after the delay
+        // to ensure it remains visible while open
+        clearTimeout(window.menuTimeout);
     }
+
+    // Store timeout ID for potential future use
+    window.menuTimeout = setTimeout(() => {
+        optionsMenu.style.display = "none";
+    }, delay);
 }
+
 
 
 
