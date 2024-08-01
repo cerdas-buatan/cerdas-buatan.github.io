@@ -145,17 +145,24 @@ function addMessageToChat(type, message) {
 //     return responses[Math.floor(Math.random() * responses.length)];
 // }
 
-function openNav() {
-    document.getElementById("mySidebar").style.left = "0";
-    document.querySelector(".main").style.marginLeft = "3px";
-    document.querySelector(".chat-container").style.marginLeft = "250px";
+function toggleSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    const main = document.querySelector(".main");
+    const chatContainer = document.querySelector(".chat-container");
+
+    if (sidebar.style.left === "0px" || sidebar.style.left === "") {
+        // Jika sidebar terbuka atau posisi default
+        sidebar.style.left = "-250px";
+        main.style.marginLeft = "0";
+        chatContainer.style.marginLeft = "0";
+    } else {
+        // Jika sidebar tertutup
+        sidebar.style.left = "0";
+        main.style.marginLeft = "250px";
+        chatContainer.style.marginLeft = "250px";
+    }
 }
 
-function closeNav() {
-    document.getElementById("mySidebar").style.left = "-250px";
-    document.querySelector(".main").style.marginLeft = "0";
-    document.querySelector(".chat-container").style.marginLeft = "0";
-}
 
 function logout() {
     Swal.fire({
@@ -201,6 +208,7 @@ document.addEventListener('click', function(event) {
         optionsMenu.style.display = "none";
     }
 });
+
 function renameMenu() {
     const newName = prompt("Enter new menu name:");
     if (newName) {
