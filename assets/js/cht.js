@@ -163,6 +163,16 @@ function toggleSidebar() {
     }
 }
 
+function toggleOptionsMenu() {
+    const optionsMenu = document.getElementById("optionsMenu");
+    if (optionsMenu.style.display === "block") {
+        optionsMenu.style.display = "none";
+    } else {
+        optionsMenu.style.display = "block";
+    }
+}
+
+
 
 function logout() {
     Swal.fire({
@@ -183,9 +193,9 @@ function logout() {
     });
 }
 
-function toggleOptionsMenu() {
-    document.getElementById("optionsMenu").classList.toggle("show");
-}
+// function toggleOptionsMenu() {
+//     document.getElementById("optionsMenu").classList.toggle("show");
+// }
 
 
 function toggleOptionsMenu() {
