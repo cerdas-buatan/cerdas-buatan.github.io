@@ -166,33 +166,28 @@ function toggleSidebar() {
     }
 }
 
+// function toggleOptionsMenu() {
+//     const optionsMenu = document.getElementById("optionsMenu");
+//     const delay = 100; // Time in milliseconds (e.g., 300ms delay)
 
+//     if (optionsMenu.style.display === "block") {
+//         // Add a delay before hiding the menu
+//         setTimeout(() => {
+//             optionsMenu.style.display = "none";
+//         }, delay);
+//     } else {
+//         // Immediately show the menu
+//         optionsMenu.style.display = "block";
+//         // Optionally, you can also reset the display state immediately after the delay
+//         // to ensure it remains visible while open
+//         clearTimeout(window.menuTimeout);
+//     }
 
-function toggleOptionsMenu() {
-    const optionsMenu = document.getElementById("optionsMenu");
-    const delay = 100; // Time in milliseconds (e.g., 300ms delay)
-
-    if (optionsMenu.style.display === "block") {
-        // Add a delay before hiding the menu
-        setTimeout(() => {
-            optionsMenu.style.display = "none";
-        }, delay);
-    } else {
-        // Immediately show the menu
-        optionsMenu.style.display = "block";
-        // Optionally, you can also reset the display state immediately after the delay
-        // to ensure it remains visible while open
-        clearTimeout(window.menuTimeout);
-    }
-
-    // Store timeout ID for potential future use
-    window.menuTimeout = setTimeout(() => {
-        optionsMenu.style.display = "none";
-    }, delay);
-}
-
-
-
+//     // Store timeout ID for potential future use
+//     window.menuTimeout = setTimeout(() => {
+//         optionsMenu.style.display = "none";
+//     }, delay);
+// }
 
 function logout() {
     Swal.fire({
@@ -205,7 +200,11 @@ function logout() {
             confirmButton: 'btn-confirm',
             cancelButton: 'btn-cancel'
         },
-        buttonsStyling: false 
+        buttonsStyling: false,
+        // Ensure SweetAlert2 does not affect the chat container
+        didOpen: () => {
+            document.querySelector('.swal2-container').style.position = 'fixed';
+        }
     }).then((result) => {
         if (result.isConfirmed) {
             window.location.href = '../index.html'; 
@@ -213,8 +212,14 @@ function logout() {
     });
 }
 
-
-
+function toggleSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+    } else {
+        sidebar.style.left = "0px";
+    }
+}
 
 function toggleOptionsMenu() {
     const optionsMenu = document.getElementById("optionsMenu");
@@ -222,11 +227,20 @@ function toggleOptionsMenu() {
         optionsMenu.style.display = "none";
     } else {
         optionsMenu.style.display = "block";
-        setTimeout(() => {
-            optionsMenu.style.display = "none";
-        }, 3000); // 3000 ms = 3 seconds
     }
 }
+
+// function toggleOptionsMenu() {
+//     const optionsMenu = document.getElementById("optionsMenu");
+//     if (optionsMenu.style.display === "block") {
+//         optionsMenu.style.display = "none";
+//     } else {
+//         optionsMenu.style.display = "block";
+//         setTimeout(() => {
+//             optionsMenu.style.display = "none";
+//         }, 3000); // 3000 ms = 3 seconds
+//     }
+// }
 
 document.addEventListener('click', function(event) {
     const optionsMenu = document.getElementById("optionsMenu");

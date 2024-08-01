@@ -11,72 +11,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YcZBYOgG24QwwDPuXgS4XtThDbzH8FTvKs3UNRv1fB/2JgkHuSNTKM5DwPfyQ8q3d8jH+/rBZGAmjLh8l3e10w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- swal alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-<!-- Sidebar -->
-<div id="mySidebar" class="sidebar">
-    <div class="sidebar-header">
-        <h2>Menu</h2>
-    </div>
-    <div class="menu-item">
-        <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a> 
-        <span class="material-icons popup-menu" onclick="toggleOptionsMenu()">more_vert</span>
-        <div class="options-menu" id="optionsMenu">
-            <a href="#">Delete Menu</a>
-            <a href="#">Rename</a>
-            <a href="#">Archive</a>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <div class="menu-item">
+            <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a> 
+            <span class="material-icons popup-menu" onclick="toggleOptionsMenu()">more_vert</span>
+            <div class="options-menu" id="optionsMenu">
+                <a href="#">Delete Menu</a>
+                <a href="#">Rename</a>
+                <a href="#">Archive</a>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Main content -->
-<div class="main">
-    <button class="openbtn" onclick="toggleSidebar()">&#9776;</button>  
-</div>
+    <!-- Main content -->
+    <div class="main">
+        <button class="openbtn" onclick="toggleSidebar()">&#9776;</button>  
+    </div>
 
-<!-- Chat container -->
-<div class="chat-container" id="chat-container">
-    <div class="chat-header">
-        <div class="header-content">
-            <h2>Gasydisal Bot</h2>
-            <!-- Profile Picture -->
-            <img src="../assets/gambar/profile.jpg" width="25px" alt="Profile Picture" class="profile-picture">
-            <!-- Logout button -->
-            <button class="logout-btn" onclick="logout()">
-                <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
-            </button>
+    <!-- Chat container -->
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <h2>Gasydisal Bot</h2>
+                <!-- Profile Picture -->
+                <img src="../assets/gambar/profile.jpg" width="25px" alt="Profile Picture" class="profile-picture">
+                <!-- Logout button -->
+                <button class="logout-btn" onclick="logout()">
+                    <img src="../assets/gambar/logout.png" width="25px" alt="Logout">
+                </button>
+            </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <!-- Centered Logo -->
+            <div class="chat-logo">
+                <img src="../assets/gambar/log.png" alt="Gasydisal Bot Logo" width="100">
+            </div>
+            
+            <!-- Card-like button -->
+            <div class="card-container">
+                <button class="card-btn" onclick="cardButtonAction()">
+                    <i class="fas fa-cogs"></i>
+                    <p>Bisa menjawab pertanyaan Anda.</p>
+                </button>
+            </div>
+            <div class="message-container bot-message-container">
+                <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
+                <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()"><b>Send</b></button>
         </div>
     </div>
-    <div class="chat-body" id="chat-body">
-        <!-- Centered Logo -->
-        <div class="chat-logo">
-            <img src="../assets/gambar/log.png" alt="Gasydisal Bot Logo" width="100">
-        </div>
-        
-        <!-- Card-like button -->
-        <div class="card-container">
-            <button class="card-btn" onclick="cardButtonAction()">
-                <i class="fas fa-cogs"></i>
-                <p>Bisa menjawab pertanyaan Anda.</p>
-            </button>
-        </div>
-        <div class="message-container bot-message-container">
-            <img src="../assets/gambar/panda.png" class="message-icon" alt="Bot Icon">
-            <p class="message bot-message">Hello! I'm your Gasydisal Bot 🤖</p>
-        </div>
-    </div>
-    <div class="chat-footer">
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button onclick="sendMessage()"><b>Send</b></button>
-    </div>
-</div>
 
-<script src="../assets/js/cht.js"></script>
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/jquery.filterizr.min.js"></script>
+    <script src="../assets/js/cht.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.filterizr.min.js"></script>
+
+    <script>
+      
+    </script>
 </body>
 </html>
