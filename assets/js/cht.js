@@ -231,17 +231,55 @@ function toggleOptionsMenu() {
     }
 }
 
-// function toggleOptionsMenu() {
-//     const optionsMenu = document.getElementById("optionsMenu");
-//     if (optionsMenu.style.display === "block") {
-//         optionsMenu.style.display = "none";
-//     } else {
-//         optionsMenu.style.display = "block";
-//         setTimeout(() => {
-//             optionsMenu.style.display = "none";
-//         }, 3000); // 3000 ms = 3 seconds
-//     }
-// }
+function deleteMenu() {
+    // Implement the delete functionality
+    Swal.fire('Deleted!', 'The menu item has been deleted.', 'success');
+}
+
+function renameMenu() {
+    Swal.fire({
+        title: 'Enter new name for the menu',
+        input: 'text',
+        inputLabel: 'New Menu Name',
+        inputValue: 'Feedback',
+        showCancelButton: true,
+        confirmButtonText: 'Save',
+        cancelButtonText: 'Cancel'
+    }).then((result) => {
+        if (result.isConfirmed && result.value) {
+            const newName = result.value;
+            const menuID = 'feedback'; // You may need to use a unique identifier for the menu item
+
+            fetch('', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ menu_id: menuID, new_name: newName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Update the menu item name on the frontend
+                    document.querySelector('.menu-item a').textContent = newName;
+                    Swal.fire('Success!', 'Menu name updated.', 'success');
+                } else {
+                    Swal.fire('Error!', 'Failed to update menu name.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire('Error!', 'Failed to update menu name.', 'error');
+            });
+        }
+    });
+}
+
+function archiveMenu() {
+    // Implement the archive functionality
+    Swal.fire('Archived!', 'The menu item has been archived.', 'success');
+}
+
 
 document.addEventListener('click', function(event) {
     const optionsMenu = document.getElementById("optionsMenu");
