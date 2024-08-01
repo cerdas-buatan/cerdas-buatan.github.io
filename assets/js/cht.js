@@ -171,11 +171,11 @@ function logout() {
         buttonsStyling: false 
     }).then((result) => {
         if (result.isConfirmed) {
-            deleteCookie('user_login'); 
             window.location.href = '../index.html'; 
         }
     });
 }
+
 function toggleOptionsMenu() {
     document.getElementById("optionsMenu").classList.toggle("show");
 }
