@@ -181,17 +181,17 @@ function toggleOptionsMenu() {
 }
 
 
-// function toggleOptionsMenu() {
-//     const optionsMenu = document.getElementById("optionsMenu");
-//     if (optionsMenu.style.display === "block") {
-//         optionsMenu.style.display = "none";
-//     } else {
-//         optionsMenu.style.display = "block";
-//         setTimeout(() => {
-//             optionsMenu.style.display = "none";
-//         }, 3000); // 3000 ms = 3 seconds
-//     }
-// }
+function toggleOptionsMenu() {
+    const optionsMenu = document.getElementById("optionsMenu");
+    if (optionsMenu.style.display === "block") {
+        optionsMenu.style.display = "none";
+    } else {
+        optionsMenu.style.display = "block";
+        setTimeout(() => {
+            optionsMenu.style.display = "none";
+        }, 3000); // 3000 ms = 3 seconds
+    }
+}
 
 document.addEventListener('click', function(event) {
     const optionsMenu = document.getElementById("optionsMenu");
