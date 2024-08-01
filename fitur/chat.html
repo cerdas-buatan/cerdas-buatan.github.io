@@ -22,14 +22,15 @@
             <h2>Menu</h2>
         </div>
         <div class="menu-item">
-            <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a> 
+            <a href="javascript:void(0)" onclick="scrollToChat()">Your New Menu Name</a> 
             <span class="material-icons popup-menu" onclick="toggleOptionsMenu()">more_vert</span>
             <div class="options-menu" id="optionsMenu">
-                <a href="#">Delete Menu</a>
-                <a href="#">Rename</a>
-                <a href="#">Archive</a>
+                <a href="#" onclick="deleteMenu()">Delete Menu</a>
+                <a href="#" onclick="renameMenu()">Rename</a>
+                <a href="#" onclick="archiveMenu()">Archive</a>
             </div>
         </div>
+        
     </div>
 
     <!-- Main content -->
@@ -75,6 +76,7 @@
     </div>
 
     <script src="../assets/js/cht.js"></script>
+    <script src="../assets/js/chtRespon.js"></script>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.filterizr.min.js"></script>
 

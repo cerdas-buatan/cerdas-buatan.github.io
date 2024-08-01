@@ -81,9 +81,9 @@ const copyResponse = (copyBtn) => {
     setTimeout(() => copyBtn.textContent = "content_copy", 1000);
 }
 
-const showTypingAnimation = () => {
-    // Display the typing animation and call the getChatResponse function
-    const html = `<div class="chat-content">
+        const showTypingAnimation = () => {
+            const html = `
+                <div class="chat-content">
                     <div class="chat-details">
                         <img src="../images/setera.png" alt="chatbot-img">
                         <div class="typing-animation">
@@ -94,13 +94,52 @@ const showTypingAnimation = () => {
                     </div>
                     <span onclick="copyResponse(this)" class="material-symbols-rounded">content_copy</span>
                 </div>`;
-    // Create an incoming chat div with typing animation and append it to chat container
-    const incomingChatDiv = createChatElement(html, "incoming");
-    chatContainer.appendChild(incomingChatDiv);
-    chatContainer.scrollTo(0, chatContainer.scrollHeight);
-    getChatResponse(incomingChatDiv);
-}
+            const incomingChatDiv = createChatElement(html, "incoming");
+            chatContainer.appendChild(incomingChatDiv);
+            chatContainer.scrollTo(0, chatContainer.scrollHeight);
+            getChatResponse(incomingChatDiv);
+        };
 
+        function createChatElement(html, type) {
+            const div = document.createElement('div');
+            div.className = `chat-message ${type}`;
+            div.innerHTML = html;
+            return div;
+        }
+
+        function getChatResponse(incomingChatDiv) {
+            // Simulate fetching chat response
+            setTimeout(() => {
+                incomingChatDiv.innerHTML = `
+                    <div class="chat-content">
+                        <div class="chat-details">
+                            <img src="../images/setera.png" alt="chatbot-img">
+                            <p>Here is the response from the bot!</p>
+                        </div>
+                        <span onclick="copyResponse(this)" class="material-symbols-rounded">content_copy</span>
+                    </div>`;
+            }, 2000); // Simulate a 2-second delay for the chat response
+        }
+
+        function copyResponse(element) {
+            // Example copy function
+            const text = element.parentElement.querySelector('p').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                Swal.fire('Copied!', 'The message has been copied to clipboard.', 'success');
+            });
+        }
+        function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput.trim() !== "") {
+                showTypingAnimation();
+                // Simulate sending message
+            }
+        }
+
+        function scrollToChat() {
+            document.getElementById('chat-container').scrollIntoView({ behavior: 'smooth' });
+        }
+        
 const handleOutgoingChat = () => {
     userText = chatInput.value.trim();
     if (!userText) return; // If chatInput is empty return from here
@@ -136,46 +175,7 @@ deleteButton.addEventListener("click", () => {
     }
 });
 
-themeButton.addEventListener("click", () => {
-    // Toggle body's class for the theme mode and save the updated theme to the local storage 
-    document.body.classList.toggle("light-mode");
-    localStorage.setItem("themeColor", themeButton.innerText);
-    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
-});
 
-uploadButton.addEventListener("click", () => {
-    fileInput.click();
-});
-
-fileInput.addEventListener("change", (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        // Display file in chat or process as needed
-        console.log('File selected:', file.name);
-    }
-});
-
-recordButton.addEventListener("click", () => {
-    // Implement voice recording functionality here
-    console.log('Voice recording started');
-});
-
-const initialInputHeight = chatInput.scrollHeight;
-
-chatInput.addEventListener("input", () => {
-    // Adjust the height of the input field dynamically based on its content
-    chatInput.style.height = `${initialInputHeight}px`;
-    chatInput.style.height = `${chatInput.scrollHeight}px`;
-});
-
-chatInput.addEventListener("keydown", (e) => {
-    // If the Enter key is pressed without Shift and the window width is larger 
-    // than 800 pixels, handle the outgoing chat
-    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-        e.preventDefault();
-        handleOutgoingChat();
-    }
-});
 
 loadDataFromLocalstorage();
 sendButton.addEventListener("click", handleOutgoingChat);

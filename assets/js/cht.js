@@ -46,6 +46,8 @@ document.getElementById('user-input').addEventListener('keypress', function(even
     }
 });
 
+
+
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() === '') return;
@@ -191,7 +193,7 @@ function toggleSidebar() {
 
 function logout() {
     Swal.fire({
-        title: 'Kamu yakin mau logout?',
+        title: 'Are you sure you want to logout?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Yes',
@@ -201,7 +203,6 @@ function logout() {
             cancelButton: 'btn-cancel'
         },
         buttonsStyling: false,
-        // Ensure SweetAlert2 does not affect the chat container
         didOpen: () => {
             document.querySelector('.swal2-container').style.position = 'fixed';
         }
