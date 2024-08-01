@@ -244,8 +244,25 @@ button[type="submit"]:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transiction: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease;
+    position: relative; /* Ensure it maintains its position */
 }
+
+.chat-footer {
+    display: flex;
+    padding: 15px;
+    border-top: 3px solid #f5f2d6;
+    justify-content: center;
+    position: relative; /* Ensure it maintains its position */
+}
+
+.logout-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+}
+
 
 .chat-header {
     background-color: #805932;
