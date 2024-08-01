@@ -78,7 +78,7 @@ body{
     background-color: #f1f1f1;
 }
 
-/* .sidebar a {
+.sidebar a {
     padding: 8px 20px;
     text-decoration: none;
     font-size: 18px;
@@ -89,27 +89,6 @@ body{
 
 .sidebar a:hover {
     background-color: #805932;
-} */
-
-/* Styling untuk sidebar */
-.sidebar {
-    position: fixed;
-    left: -250px; /* Tersembunyi secara default */
-    width: 250px;
-    height: 100%;
-    background-color: #111;
-    color: white;
-    transition: left 0.3s;
-}
-
-/* Styling untuk konten utama */
-.main {
-    transition: margin-left 0.3s;
-}
-
-/* Styling untuk konten chat */
-.chat-container {
-    transition: margin-left 0.3s;
 }
 
 .openbtn {
@@ -129,7 +108,7 @@ body{
     background-color: #353516a9;
 }
 
-.sidebar .closebtn {
+/* .sidebar .closebtn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -145,7 +124,7 @@ body{
 
 .sidebar .closebtn:hover {
     background-color: #353516a9; /* Change color on hover */
-}
+} */
 
 .options-menu {
     display: none;

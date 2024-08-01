@@ -149,19 +149,22 @@ function toggleSidebar() {
     const sidebar = document.getElementById("mySidebar");
     const main = document.querySelector(".main");
     const chatContainer = document.querySelector(".chat-container");
+    const sidebarWidth = "198px"; // Width of the sidebar
 
-    if (sidebar.style.left === "0px" || sidebar.style.left === "") {
-        // Jika sidebar terbuka atau posisi default
-        sidebar.style.left = "-250px";
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = `-${sidebarWidth}`;
         main.style.marginLeft = "0";
         chatContainer.style.marginLeft = "0";
     } else {
-        // Jika sidebar tertutup
-        sidebar.style.left = "0";
-        main.style.marginLeft = "250px";
-        chatContainer.style.marginLeft = "250px";
+        sidebar.style.left = "0px";
+        main.style.marginLeft = sidebarWidth;
+        chatContainer.style.marginLeft = sidebarWidth; // Align directly with sidebar
     }
 }
+
+
+
+
 
 function toggleOptionsMenu() {
     const optionsMenu = document.getElementById("optionsMenu");
@@ -193,9 +196,7 @@ function logout() {
     });
 }
 
-// function toggleOptionsMenu() {
-//     document.getElementById("optionsMenu").classList.toggle("show");
-// }
+
 
 
 function toggleOptionsMenu() {

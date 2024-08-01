@@ -19,28 +19,23 @@
 <body>
 <!-- Sidebar -->
 <div id="mySidebar" class="sidebar">
-    <div class="main">
-        <button onclick="toggleSidebar()">Toggle Sidebar</button>
-        <!-- Konten utama -->
-    </div>
-    <!-- <div class="sidebar-header">
+    <div class="sidebar-header">
         <h2>Menu</h2>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     </div>
     <div class="menu-item">
         <a href="javascript:void(0)" onclick="scrollToChat()">Feedback</a> 
         <span class="material-icons popup-menu" onclick="toggleOptionsMenu()">more_vert</span>
         <div class="options-menu" id="optionsMenu">
             <a href="#">Delete Menu</a>
-            <a href="#">Rename </a>
-            <a href="#">Arsip</a>
+            <a href="#">Rename</a>
+            <a href="#">Archive</a>
         </div>
-    </div> -->
+    </div>
 </div>
 
 <!-- Main content -->
 <div class="main">
-    <button class="openbtn" onclick="openNav()">&#9776;</button>  
+    <button class="openbtn" onclick="toggleSidebar()">&#9776;</button>  
 </div>
 
 <!-- Chat container -->
@@ -57,7 +52,6 @@
         </div>
     </div>
     <div class="chat-body" id="chat-body">
-
         <!-- Centered Logo -->
         <div class="chat-logo">
             <img src="../assets/gambar/log.png" alt="Gasydisal Bot Logo" width="100">
