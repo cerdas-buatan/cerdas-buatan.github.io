@@ -233,20 +233,4 @@ function addMenu() {
 
 
 
-// function logout() {
-//     Swal.fire({
-//         title: 'Kamu yakin mau logout?',
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonText: 'Yes',
-//         cancelButtonText: 'No'
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             window.location.href = '../index.html'; 
-//         }
-//     });
-// }
-
-
-
 
