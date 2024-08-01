@@ -55,28 +55,6 @@ body{
 }
 
 /* Options menu */
-.options-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    z-index: 1000;
-    margin-top: 10px;
-    right: 0;
-}
-
-.options-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-}
-
-.options-menu a:hover {
-    background-color: #f1f1f1;
-}
 
 .sidebar a {
     padding: 8px 20px;
